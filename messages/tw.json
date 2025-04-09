@@ -127,10 +127,10 @@
     "subTitle": "幫助代理相互通信的協作方式",
     "a2a-introduction": "關於A2A協議",
     "a2a-features": "主要特點",
-    "a2a-partners": "精選A2A伺服器",
+    "a2a-partners": "精選A2A代理",
     "a2a-cases": "真實應用案例",
     "exploreMore": "探索更多",
-    "viewAllPartners": "查看所有A2A伺服器"
+    "viewAllPartners": "查看所有A2A代理"
   },
   "Submit": {
     "title": "提交您的AI工具",
@@ -181,9 +181,9 @@
         "keywords": "A2A協議, 技術規範, API, 實施"
       },
       "partners": {
-        "title": "A2A協議合作夥伴與生態系統",
+        "title": "A2A協議代理與生態系統",
         "description": "探索為A2A協議生態系統做出貢獻的50多個技術合作夥伴和服務提供商。",
-        "keywords": "A2A合作夥伴, 技術合作夥伴, 服務提供商, AI生態系統"
+        "keywords": "A2A代理, 技術合作夥伴, 服務提供商, AI生態系統"
       },
       "caseStudies": {
         "title": "A2A協議案例研究與應用",

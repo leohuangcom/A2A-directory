@@ -6,7 +6,7 @@
     "title": "A2A Protocol Directory",
     "overview": "Overview",
     "specification": "Specification",
-    "partners": "Partners",
+    "partners": "Agents",
     "case-studies": "Case Studies",
     "resources": "Resources",
     "explore": "Explore",
@@ -125,12 +125,12 @@
   "Home": {
     "title": "A2A - Agent2Agent Protocol",
     "subTitle": "A collaborative way to help agents communicate with each other",
-    "a2a-introduction": "About A2A Protocol",
+    "a2a-introduction": "About A2A",
     "a2a-features": "Key Features",
-    "a2a-partners": "Featured A2A Servers",
+    "a2a-partners": "Featured A2A Agents",
     "a2a-cases": "Real-World Use Cases",
     "exploreMore": "Explore More",
-    "viewAllPartners": "View All A2A Servers"
+    "viewAllPartners": "View All A2A Agents"
   },
   "Submit": {
     "title": "Submit your AI Tool",
@@ -181,9 +181,9 @@
         "keywords": "A2A Protocol, Technical Specification, API, Implementation"
       },
       "partners": {
-        "title": "A2A Servers Directory & Ecosystem",
-        "description": "Explore the A2A compatible servers and service providers supporting the A2A Protocol ecosystem.",
-        "keywords": "A2A Servers, A2A Directory, Service Providers, AI Ecosystem"
+        "title": "A2A Agents Directory & Ecosystem",
+        "description": "Explore the A2A compatible agents and service providers supporting the A2A Protocol ecosystem.",
+        "keywords": "A2A Agents, A2A Directory, Service Providers, AI Ecosystem"
       },
       "caseStudies": {
         "title": "A2A Protocol Case Studies & Applications",

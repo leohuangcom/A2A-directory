@@ -22,7 +22,7 @@ export default function Footer() {
             Documentation
           </Link>
           <Link href='/a2a/partners' className='hover:text-white'>
-            Partners
+            Agents
           </Link>
         </div>
       </div>

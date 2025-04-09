@@ -68,7 +68,7 @@ export default async function Page() {
           </div>
         </div>
 
-        {/* Featured A2A Servers */}
+        {/* Featured A2A Agents */}
         <div className='mb-10'>
           <h2 className='mb-4 text-center text-[18px] lg:text-[32px]'>{t('a2a-partners')}</h2>
           <WebNavCardList dataList={res.rows} />
