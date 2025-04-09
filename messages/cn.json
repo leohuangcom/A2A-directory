@@ -124,7 +124,7 @@
   },
   "Home": {
     "title": "A2A - Agent2Agent协议",
-    "subTitle": "实现跨平台和供应商的AI代理无缝协作",
+    "subTitle": "帮助代理相互通信的协作方式",
     "a2a-introduction": "关于A2A协议",
     "a2a-features": "主要特点",
     "a2a-partners": "精选A2A服务器",

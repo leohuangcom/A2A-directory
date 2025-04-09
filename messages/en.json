@@ -123,8 +123,8 @@
     "goHome": "go home"
   },
   "Home": {
-    "title": "A2A - The Agent2Agent Protocol",
-    "subTitle": "Enabling seamless collaboration between AI agents across platforms and vendors",
+    "title": "A2A - Agent2Agent Protocol",
+    "subTitle": "A collaborative way to help agents communicate with each other",
     "a2a-introduction": "About A2A Protocol",
     "a2a-features": "Key Features",
     "a2a-partners": "Featured A2A Servers",

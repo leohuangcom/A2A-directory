@@ -101,8 +101,8 @@
     "goHome": "ホームへ"
   },
   "Home": {
-    "title": "A2Aプロトコル - エージェント相互運用性フレームワーク",
-    "subTitle": "Agent2Agent（A2A）プロトコルの公式ディレクトリ - プラットフォームとベンダー間でAIエージェントのシームレスな連携を実現",
+    "title": "A2A - Agent2Agentプロトコル",
+    "subTitle": "エージェントが相互に通信するための協力的な方法",
     "a2a-introduction": "A2Aプロトコルについて",
     "a2a-features": "主な特徴",
     "a2a-partners": "注目のA2Aサーバー",
