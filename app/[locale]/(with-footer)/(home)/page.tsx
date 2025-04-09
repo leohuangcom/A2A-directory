@@ -47,9 +47,9 @@ export default async function Page() {
           <h2 className='mb-4 text-center text-[18px] lg:text-[32px]'>{t('a2a-introduction')}</h2>
           <div className='rounded-lg bg-gray-800 p-6'>
             <p className='mb-4 text-white'>
-              A2A is a new, open protocol launched by Google Cloud with support from over 50 technology partners. It
-              enables AI agents to communicate with each other, securely exchange information, and coordinate actions
-              across enterprise platforms and applications.
+              Agent2Agent Protocol (A2A) is a new, open protocol launched by Google Cloud with support from over 50
+              technology partners. It enables AI agents to communicate with each other, securely exchange information,
+              and coordinate actions across enterprise platforms and applications.
             </p>
             <p className='text-white'>
               The protocol complements Anthropic&apos;s Model Context Protocol (MCP) and is designed to address the

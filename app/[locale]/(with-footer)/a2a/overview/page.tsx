@@ -38,7 +38,7 @@ export default async function OverviewPage() {
         </div>
 
         <div className='mb-12 rounded-lg bg-gray-800 p-6'>
-          <h2 className='mb-4 text-2xl font-semibold text-white'>About A2A</h2>
+          <h2 className='mb-4 text-2xl font-semibold text-white'>Agent2Agent Protocol (A2A)</h2>
           <p className='mb-4 text-white'>
             A2A is an open protocol developed by Google Cloud with support from over 50 technology partners. It provides
             a standard way for AI agents to communicate with each other, securely exchange information, and coordinate
