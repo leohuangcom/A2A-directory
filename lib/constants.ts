@@ -1,24 +1,46 @@
 export const NAV_LINKS = [
   {
-    code: 'discover',
+    code: 'overview',
+    href: '/a2a/overview',
+  },
+  {
+    code: 'specification',
+    href: '/a2a/specification',
+  },
+  {
+    code: 'partners',
+    href: '/a2a/partners',
+  },
+  {
+    code: 'case-studies',
+    href: '/a2a/case-studies',
+  },
+  {
+    code: 'resources',
+    href: '/a2a/resources',
+  },
+  {
+    code: 'explore',
     href: '/explore',
   },
-  {
-    code: 'submit',
-    href: '/submit',
-  },
-  {
-    code: 'startup',
-    href: '/startup',
-  },
+  // 临时隐藏Submit入口
+  // {
+  //   code: 'submit',
+  //   href: '/submit',
+  // },
+  // 临时隐藏Startup入口
+  // {
+  //   code: 'startup',
+  //   href: '/startup',
+  // },
 ];
 
 export const PAGE_SIZE = 20;
 
-export const FORM_PLACEHOLDER = 'https://tap4.ai/';
+export const FORM_PLACEHOLDER = 'https://a2a-protocol.dev/';
 
 export const WEBSITE_EXAMPLE =
-  '<a href="https://tap4.ai/" title="Tap4 AI Tools Directory">Tap4 AI Tools Diresctory</a>';
+  '<a href="https://a2a-protocol.dev/" title="A2A Protocol Directory">A2A Protocol Directory</a>';
 
 export const STARTUP_LIST = [
   {

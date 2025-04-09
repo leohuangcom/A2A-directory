@@ -3,19 +3,21 @@
     "loading": "loading..."
   },
   "Navigation": {
-    "title": "Tap4 AI Tools Directory",
-    "discover": "Discover AI",
-    "submit": "Submit",
-    "newtools": "New Tools",
+    "title": "A2A Protocol Directory",
+    "overview": "Overview",
+    "specification": "Specification",
+    "partners": "Partners",
+    "case-studies": "Case Studies",
+    "resources": "Resources",
+    "explore": "Explore",
     "startup": "Startup",
+    "submit": "Submit",
     "menu": "menu"
   },
   "Footer": {
-    "title": "Tap4 AI Tools Directory",
-    "subTitle": "Discover the best AI tools of 2024 with the Tap4 AI Tools Directory!",
+    "title": "A2A Protocol Directory",
+    "subTitle": "The official directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability",
     "support": "Support",
-    "tap4": "Tap4 AI",
-    "tattoo": "AI Tattoo Generator",
     "privacy": "Privacy policy",
     "termsConditions": "Terms & Conditions",
     "contactUs": "Contact Us"
@@ -23,51 +25,54 @@
   "Faq": {
     "title": "Frequently Asked Questions",
     "1": {
-      "question": "What is Tap4 AI Tools Directory?",
-      "answer": "Tap4 AI Tools Directory - tap4.ai is building an ai tools directory that helps you get your favorite ai tools. It can get ai writing tools, ai markting tools, ai paraphrasing tools, ai seo tools, ai study tools, ai generator tools, ai research tools, ai art tools, ai music tools, ai video tools, ai coding tools, ai photo tools and more here."
+      "question": "What is the A2A Protocol?",
+      "answer": "The Agent2Agent (A2A) Protocol is an open protocol developed by Google Cloud with support from over 50 technology partners. It allows AI agents to communicate with each other, securely exchange information, and coordinate actions on top of various enterprise platforms or applications."
     },
     "2": {
-      "question": "How to found your ai tools in tap4 ai tools directory?",
-      "answer-1": "1. Open tap4.ai.",
-      "answer-2": "2. Explore the ai tools in the tap4 ai tools directory.",
-      "answer-3": "3. Click the ai tools that you need to get the detail and visit it."
+      "question": "How does the A2A Protocol work?",
+      "answer-1": "1. A2A facilitates communication between a 'client' agent and a 'remote' agent.",
+      "answer-2": "2. Agents can advertise their capabilities using an 'Agent Card' in JSON format.",
+      "answer-3": "3. Agents communicate through task objects and can exchange messages with context, replies, and artifacts."
     },
     "3": {
-      "question": "What are the main features of Tap4 AI Tools Directory?",
-      "answer-1": "1. Free AI Tools Directory: It's free to found your favorite AI Tools here.",
-      "answer-2": "2. Startup List: The free startup list for ai tools developers."
+      "question": "What are the main features of the A2A Protocol?",
+      "answer-1": "1. Agentic Capabilities: Enables agents to collaborate in their natural, unstructured modalities.",
+      "answer-2": "2. Built on Existing Standards: Uses HTTP, SSE, JSON-RPC for easier integration.",
+      "answer-3": "3. Enterprise-Grade Security: Supports robust authentication and authorization.",
+      "answer-4": "4. Support for Long-Running Tasks: Flexible for both quick tasks and complex operations.",
+      "answer-5": "5. Modality Agnostic: Supports various data types including text, audio, and video."
     },
     "4": {
-      "question": "Is it free to submit ai tools to Tap4 AI Tools Directory?",
-      "answer": "Yes, it's free currently. But you should share the backlink for Tap4 AI Tools Directory!"
+      "question": "Who is contributing to the A2A Protocol?",
+      "answer": "A2A is supported by more than 50 technology partners including Atlassian, Box, Cohere, Intuit, Langchain, MongoDB, PayPal, Salesforce, SAP, ServiceNow, UKG, Workday, and leading service providers such as Accenture, BCG, Capgemini, Deloitte, and more."
     },
     "5": {
-      "question": "What's the categories list of AI Tools that Tap4 AI Tools Directory support?",
-      "answer": "We will support all kinds of AI Tools later. Please wait for a few days."
+      "question": "How can I implement the A2A Protocol?",
+      "answer": "You can get started by exploring the full specification draft and code samples available in the Resources section of this directory. The protocol is designed to be integrable with existing IT infrastructure."
     },
     "6": {
-      "question": "What's the frequency for the up of AI tools in Tap4 AI Directory?",
-      "answer": "The list of AI tools will be updated daily."
+      "question": "Is the A2A Protocol open source?",
+      "answer": "Yes, A2A is an open protocol that complements existing technologies like Anthropic's Model Context Protocol (MCP). It's designed to be accessible and implementable by any organization."
     },
     "7": {
-      "question": "Is it support GPT-4o or Sora AI here?",
-      "answer": "You can get the GPT-4o or Sora AI tool here. Here is the introduction of GPT-4o and Sora video, and you can visit the website of the tools."
+      "question": "What platforms are compatible with A2A Protocol?",
+      "answer": "The A2A Protocol is designed to be platform-agnostic. It works across cloud platforms, on-premises systems, and hybrid environments, making it versatile for various enterprise architectures."
     },
     "8": {
-      "question": "Troubleshooting",
-      "answer": "If the content aren't appearing, try a different browser, clear your cache. If issues persist, contact us at contact@6677.ai."
+      "question": "Does A2A Protocol support multilingual communication?",
+      "answer": "Yes, the A2A Protocol supports multilingual communication between agents, allowing them to exchange information in various languages and translate between them as needed."
     },
     "9": {
-      "question": "How does the content of Tap4 AI Directory get generated?",
-      "answer": "The content of the description of the ai tools is generated by GPT-4o from OpenAI."
+      "question": "How does A2A Protocol handle security and privacy?",
+      "answer": "A2A Protocol implements enterprise-grade security with robust authentication and authorization mechanisms. It includes features for data encryption, access control, and compliance with privacy regulations."
     },
     "10": {
-      "question": "What are the usage rights of the AI tools?",
-      "answer": "Tap4 AI Tools Directory is just the AI Directory for AI tools. The usage rights of the AI tools are based on the AI tools' website."
+      "question": "Can I contribute to the A2A Protocol development?",
+      "answer": "Absolutely. A2A Protocol welcomes contributions from developers and organizations. You can participate through code contributions, documentation improvements, or by sharing feedback and use cases."
     },
     "11": {
-      "question": "Does the webui of Tap4 AI Directory is open source?",
-      "answer": "Yes, we will open source the webui of Tap4 AI Directory in the github(https://github.com/6677-ai/tap4-ai-webui). Please star us."
+      "question": "How does A2A Protocol differ from other agent communication frameworks?",
+      "answer": "A2A Protocol focuses on enterprise needs with emphasis on security, scalability, and standardization. It's built on existing web standards and designed specifically for AI agent collaboration across organizational boundaries."
     }
   },
   "FooterNavigation": {
@@ -118,10 +123,14 @@
     "goHome": "go home"
   },
   "Home": {
-    "title": "Tap4 AI - Discover The Best AI Tools 2024",
-    "subTitle": "Get your favorite AI tools in Tap4 AI Tools Directory. AI tools list are updated daily by GPT-4o. It's free to submit here to enhance your SEO now. ",
-    "ai-navigate": "AI Tools List",
-    "exploreMore": "Get More AI Tools"
+    "title": "A2A - The Agent2Agent Protocol",
+    "subTitle": "Enabling seamless collaboration between AI agents across platforms and vendors",
+    "a2a-introduction": "About A2A Protocol",
+    "a2a-features": "Key Features",
+    "a2a-partners": "Featured A2A Servers",
+    "a2a-cases": "Real-World Use Cases",
+    "exploreMore": "Explore More",
+    "viewAllPartners": "View All Partners"
   },
   "Submit": {
     "title": "Submit your AI Tool",
@@ -156,9 +165,36 @@
   },
   "Metadata": {
     "home": {
-      "title": "Get your best AI Tools | Tap4 AI Directory",
-      "description": "Tap4 AI Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Tap4 AI Directory, Tap4 AI Directory aims to collect all the AI tools and provide the best for users.",
-      "keywords": "Tap4 AI Directory"
+      "title": "A2A Protocol Directory | Agent2Agent Interoperability Framework",
+      "description": "The official directory for the Agent2Agent (A2A) Protocol - an open framework for agent interoperability developed by Google Cloud with over 50 technology partners.",
+      "keywords": "A2A Protocol, Agent2Agent, AI Agents, Agent Interoperability, Google Cloud"
+    },
+    "a2a": {
+      "overview": {
+        "title": "A2A Protocol Overview | Agent2Agent Framework",
+        "description": "Learn about the A2A Protocol - a new era of agent interoperability for AI systems to communicate and collaborate across platforms.",
+        "keywords": "A2A Protocol, AI Agents, Interoperability, Agent2Agent"
+      },
+      "specification": {
+        "title": "A2A Protocol Technical Specification",
+        "description": "Detailed technical documentation of the A2A Protocol including architecture, data models, and implementation guidelines.",
+        "keywords": "A2A Protocol, Technical Specification, API, Implementation"
+      },
+      "partners": {
+        "title": "A2A Protocol Partners & Ecosystem",
+        "description": "Explore the 50+ technology partners and service providers contributing to the A2A Protocol ecosystem.",
+        "keywords": "A2A Partners, Technology Partners, Service Providers, AI Ecosystem"
+      },
+      "caseStudies": {
+        "title": "A2A Protocol Case Studies & Applications",
+        "description": "Real-world examples and use cases of the A2A Protocol in action across various industries.",
+        "keywords": "A2A Use Cases, AI Agent Applications, Industry Solutions"
+      },
+      "resources": {
+        "title": "A2A Protocol Resources & Documentation",
+        "description": "Developer resources, documentation, code samples, and implementation guides for the A2A Protocol.",
+        "keywords": "A2A Documentation, Developer Resources, Implementation Guides"
+      }
     },
     "ai": {
       "titleSubfix": "Tap4 AI Directory"
