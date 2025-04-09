@@ -156,22 +156,40 @@
   },
   "Metadata": {
     "home": {
-      "title": "Obtenez vos meilleurs outils AI | Répertoire des outils AI de Tap4",
+      "title": "A2A Agents | a2a.plus",
       "description": "Le Répertoire des outils AI de Tap4 est un outil qui propose un répertoire gratuit d'outils AI. Obtenez vos outils AI préférés avec le Répertoire des outils AI de Tap4, qui vise à collecter tous les outils AI et à fournir le meilleur service aux utilisateurs.",
       "keywords": "Répertoire des outils AI de Tap4"
     },
+    "overview": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "specification": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "resources": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "case-studies": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "partners": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "agents": {
+      "title": "A2A Agents | a2a.plus"
+    },
     "ai": {
-      "titleSubfix": "Répertoire des outils AI de Tap4"
+      "titleSubfix": "Annuaire Tap4 IA"
     },
     "explore": {
-      "title": "Découvrez les meilleurs outils AI de 2024 | Répertoire des outils AI de Tap4",
+      "title": "A2A Agents | a2a.plus",
       "titlePrefix": "Explorez le Répertoire des outils AI de Tap4",
       "titleSuffix": "Répertoire des outils AI de Tap4",
       "description": "Le Répertoire des outils AI de Tap4 est un outil qui propose un répertoire gratuit d'outils AI. Obtenez vos outils AI préférés avec le Répertoire des outils AI de Tap4, qui vise à collecter tous les outils AI et à fournir le meilleur service aux utilisateurs.",
       "keywords": "Répertoire des outils AI de Tap4"
     },
     "submit": {
-      "title": "Soumettez votre outil AI et obtenez du trafic | Répertoire des outils AI de Tap4"
+      "title": "A2A Agents | a2a.plus"
     }
   }
 }

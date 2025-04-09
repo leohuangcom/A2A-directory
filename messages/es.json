@@ -156,22 +156,40 @@
   },
   "Metadata": {
     "home": {
-      "title": "Obtén tus mejores Herramientas de IA | Directorio de IA de Tap4",
+      "title": "A2A Agents | a2a.plus",
       "description": "El Directorio de IA de Tap4 es una herramienta que proporciona un Directorio gratuito de Herramientas de IA. Obtén tus herramientas de IA favoritas con el Directorio de IA de Tap4, el cual tiene como objetivo recopilar todas las herramientas de IA y ofrecer lo mejor para los usuarios.",
       "keywords": "Directorio de IA de Tap4"
+    },
+    "overview": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "specification": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "resources": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "case-studies": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "partners": {
+      "title": "A2A Agents | a2a.plus"
+    },
+    "agents": {
+      "title": "A2A Agents | a2a.plus"
     },
     "ai": {
       "titleSubfix": "Directorio de IA de Tap4"
     },
     "explore": {
-      "title": "Mejor Exploración de Herramientas de IA 2024 | Directorio de IA de Tap4",
+      "title": "A2A Agents | a2a.plus",
       "titlePrefix": "Explorar Directorio de IA de Tap4",
       "titleSuffix": "Directorio de IA de Tap4",
       "description": "El Directorio de IA de Tap4 es una herramienta que proporciona un Directorio gratuito de Herramientas de IA. Obtén tus herramientas de IA favoritas con el Directorio de IA de Tap4, el cual tiene como objetivo recopilar todas las herramientas de IA y ofrecer lo mejor para los usuarios.",
       "keywords": "Directorio de IA de Tap4"
     },
     "submit": {
-      "title": "Envía tu herramienta de IA y obtén tráfico | Directorio de IA de Tap4"
+      "title": "A2A Agents | a2a.plus"
     }
   }
 }

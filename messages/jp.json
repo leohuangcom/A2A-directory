@@ -143,37 +143,37 @@
   },
   "Metadata": {
     "home": {
-      "title": "A2Aプロトコルディレクトリ | Agent2Agent相互運用性フレームワーク",
+      "title": "A2A Agents | a2a.plus",
       "description": "Agent2Agent（A2A）プロトコルの公式ディレクトリ - Google Cloudが50以上のテクノロジーパートナーと共に開発したエージェント相互運用性のためのオープンフレームワーク。",
       "keywords": "A2Aプロトコル、Agent2Agent、AIエージェント、エージェント相互運用性、Google Cloud"
     },
     "overview": {
-      "title": "A2Aプロトコル概要 | Agent2Agentフレームワーク",
+      "title": "A2A Agents | a2a.plus",
       "description": "A2Aプロトコルについて学ぶ - AIシステムのプラットフォーム間通信と協力のための新時代エージェント相互運用性。",
       "keywords": "A2Aプロトコル、AIエージェント、相互運用性、Agent2Agent"
     },
     "specification": {
-      "title": "A2Aプロトコル技術仕様",
+      "title": "A2A Agents | a2a.plus",
       "description": "アーキテクチャ、データモデル、実装ガイドラインを含むA2Aプロトコルの詳細な技術文書。",
       "keywords": "A2Aプロトコル、技術仕様、API、実装"
     },
     "resources": {
-      "title": "A2Aプロトコルリソース＆ドキュメント",
+      "title": "A2A Agents | a2a.plus",
       "description": "A2Aプロトコルの開発者リソース、ドキュメント、コードサンプル、実装ガイド。",
       "keywords": "A2Aドキュメント、開発者リソース、実装ガイド"
     },
     "case-studies": {
-      "title": "A2Aプロトコルケーススタディ＆アプリケーション",
+      "title": "A2A Agents | a2a.plus",
       "description": "さまざまな業界におけるA2Aプロトコルの実際の例とユースケース。",
       "keywords": "A2Aユースケース、AIエージェントアプリケーション、産業ソリューション"
     },
     "partners": {
-      "title": "A2Aプロトコルエージェント＆エコシステム",
+      "title": "A2A Agents | a2a.plus",
       "description": "A2Aプロトコルエコシステムに貢献する50以上のテクノロジーパートナーとサービスプロバイダーを探索する。",
       "keywords": "A2Aエージェント、テクノロジーパートナー、サービスプロバイダー、AIエコシステム"
     },
     "agents": {
-      "title": "A2A エージェントディレクトリ | Agent2Agent プロトコル",
+      "title": "A2A Agents | a2a.plus",
       "description": "A2A プロトコルをサポートする A2A 互換エージェントとサービスプロバイダーの成長しているエコシステムをご覧ください。",
       "keywords": "A2A エージェント, A2A ディレクトリ, エージェント互換性, A2A サービスプロバイダー, AI 相互運用性"
     },
@@ -181,14 +181,14 @@
       "titleSubfix": "Tap4 AIツールディレクトリ"
     },
     "explore": {
-      "title": "A2Aプロトコルを探索する | A2Aディレクトリ",
+      "title": "A2A Agents | a2a.plus",
       "titlePrefix": "A2Aプロトコルディレクトリを探索する",
       "titleSuffix": "A2Aプロトコルディレクトリ",
       "description": "Agent2Agent（A2A）プロトコルとその実装について詳細を発見する。このプロトコルはAIエージェント間の相互運用性を実現するために設計されています。",
       "keywords": "A2Aプロトコル、AIエージェント、相互運用性"
     },
     "submit": {
-      "title": "A2Aプロトコルに参加する | A2Aプロトコルディレクトリ"
+      "title": "A2A Agents | a2a.plus"
     }
   },
   "Agents": {
