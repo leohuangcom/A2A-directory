@@ -12,7 +12,7 @@ export default function WebNavCard({
 }: Omit<WebNavigationListRow, 'url' | 'id' | 'imageUrl'>) {
   return (
     <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
-      <Link href={`/ai/${name}`} title={title} className='hover:opacity-70'>
+      <Link href={`/agents/${name}`} title={title} className='hover:opacity-70'>
         <BaseImage
           width={278}
           height={156}
@@ -23,11 +23,11 @@ export default function WebNavCard({
         />
       </Link>
       <div className='flex items-center justify-between'>
-        <Link href={`/ai/${name}`} title={title} className='w-full hover:opacity-70'>
+        <Link href={`/agents/${name}`} title={title} className='w-full hover:opacity-70'>
           <h3 className='line-clamp-1 text-sm font-bold lg:text-base'>{title}</h3>
         </Link>
       </div>
-      <Link href={`/ai/${name}`} title={title} className='hover:opacity-70'>
+      <Link href={`/agents/${name}`} title={title} className='hover:opacity-70'>
         <p className='line-clamp-5 text-xs text-white/70 lg:text-sm'>{content}</p>
       </Link>
     </div>

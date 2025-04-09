@@ -196,6 +196,9 @@
         "keywords": "A2A Documentation, Developer Resources, Implementation Guides"
       }
     },
+    "agents": {
+      "titleSubfix": "A2A Protocol Directory"
+    },
     "ai": {
       "titleSubfix": "Tap4 AI Directory"
     },
