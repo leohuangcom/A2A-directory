@@ -273,5 +273,59 @@
     },
     "explore-agents": "Explore A2A Agents",
     "implementation-resources": "Implementation Resources"
+  },
+  "Overview": {
+    "title": "A2A Protocol Overview",
+    "description": "The Agent2Agent (A2A) Protocol is a new era of agent interoperability, enabling AI agents to communicate and collaborate seamlessly.",
+    "protocol-title": "Agent2Agent Protocol (A2A)",
+    "protocol-p1": "A2A is an open protocol developed by Google Cloud with support from over 50 technology partners. It provides a standard way for AI agents to communicate with each other, securely exchange information, and coordinate actions across various enterprise platforms or applications.",
+    "protocol-p2": "This collaborative effort signifies a shared vision of a future when AI agents, regardless of their underlying technologies, can seamlessly collaborate to automate complex enterprise workflows and drive unprecedented levels of efficiency and innovation.",
+    "protocol-p3": "A2A complements Anthropic's Model Context Protocol (MCP), which provides helpful tools and context to agents. Drawing on Google's internal expertise in scaling agentic systems, the A2A protocol addresses the challenges identified in deploying large-scale, multi-agent systems for customers.",
+    "principles-title": "A2A Design Principles",
+    "principles-intro": "The A2A protocol adheres to five key design principles:",
+    "principles": {
+      "1": {
+        "title": "1. Embrace Agentic Capabilities",
+        "description": "A2A focuses on enabling agents to collaborate in their natural, unstructured modalities, even when they don't share memory, tools and context. This enables true multi-agent scenarios without limiting an agent to a \"tool.\""
+      },
+      "2": {
+        "title": "2. Build on Existing Standards",
+        "description": "The protocol is built on top of existing, popular standards including HTTP, SSE, JSON-RPC, which means it's easier to integrate with existing IT stacks businesses already use daily."
+      },
+      "3": {
+        "title": "3. Secure by Default",
+        "description": "A2A is designed to support enterprise-grade authentication and authorization, with parity to OpenAPI's authentication schemes at launch."
+      },
+      "4": {
+        "title": "4. Support for Long-Running Tasks",
+        "description": "A2A is designed to be flexible and support scenarios where it excels at completing everything from quick tasks to deep research that may take hours or even days when humans are in the loop. Throughout this process, A2A can provide real-time feedback, notifications, and state updates to its users."
+      },
+      "5": {
+        "title": "5. Modality Agnostic",
+        "description": "The agentic world isn't limited to just text, which is why A2A is designed to support various modalities, including audio and video streaming."
+      }
+    },
+    "how-works-title": "How A2A Works",
+    "how-works-intro": "A2A facilitates communication between a \"client\" agent and a \"remote\" agent. A client agent is responsible for formulating and communicating tasks, while the remote agent is responsible for acting on those tasks in an attempt to provide the correct information or take the correct action. This interaction involves several key capabilities:",
+    "how-works": {
+      "1": {
+        "title": "Capability Discovery",
+        "description": "Agents can advertise their capabilities using an \"Agent Card\" in JSON format, allowing the client agent to identify the best agent that can perform a task and leverage A2A to communicate with the remote agent."
+      },
+      "2": {
+        "title": "Task Management",
+        "description": "The communication between a client and remote agent is oriented towards task completion, in which agents work to fulfill end-user requests. This \"task\" object is defined by the protocol and has a lifecycle. It can be completed immediately or, for long-running tasks, each of the agents can communicate to stay in sync with each other on the latest status of completing a task. The output of a task is known as an \"artifact.\""
+      },
+      "3": {
+        "title": "Collaboration",
+        "description": "Agents can send each other messages to communicate context, replies, artifacts, or user instructions."
+      },
+      "4": {
+        "title": "User Experience Negotiation",
+        "description": "Each message includes \"parts,\" which is a fully formed piece of content, like a generated image. Each part has a specified content type, allowing client and remote agents to negotiate the correct format needed and explicitly include negotiations of the user's UI capabilities–e.g., iframes, video, web forms, and more."
+      }
+    },
+    "view-specification": "View Technical Specification",
+    "explore-agents": "Explore Agents"
   }
 }

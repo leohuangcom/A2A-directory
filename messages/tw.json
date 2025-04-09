@@ -2,11 +2,11 @@
   "Common": {
     "loading": "加載中..."
   },
-  "Nav": {
+  "Navigation": {
     "title": "A2A 協議目錄",
     "overview": "概述",
     "specification": "技術規範",
-    "partners": "合作夥伴",
+    "partners": "代理",
     "case-studies": "案例研究",
     "resources": "資源",
     "explore": "探索",

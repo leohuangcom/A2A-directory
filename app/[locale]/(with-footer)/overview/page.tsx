@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -26,121 +27,69 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export const revalidate = 3600;
 
 export default async function OverviewPage() {
+  const t = await getTranslations('Overview');
+
   return (
     <div className='relative w-full'>
       <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
         <div className='my-8'>
-          <h1 className='mb-4 text-center text-3xl font-bold text-white'>A2A Protocol Overview</h1>
-          <p className='mx-auto mb-8 max-w-3xl text-center text-gray-300'>
-            The Agent2Agent (A2A) Protocol is a new era of agent interoperability, enabling AI agents to communicate and
-            collaborate seamlessly.
-          </p>
+          <h1 className='mb-4 text-center text-3xl font-bold text-white'>{t('title')}</h1>
+          <p className='mx-auto mb-8 max-w-3xl text-center text-gray-300'>{t('description')}</p>
         </div>
 
         <div className='mb-12 rounded-lg bg-gray-800 p-6'>
-          <h2 className='mb-4 text-2xl font-semibold text-white'>Agent2Agent Protocol (A2A)</h2>
-          <p className='mb-4 text-white'>
-            A2A is an open protocol developed by Google Cloud with support from over 50 technology partners. It provides
-            a standard way for AI agents to communicate with each other, securely exchange information, and coordinate
-            actions across various enterprise platforms or applications.
-          </p>
-          <p className='mb-4 text-white'>
-            This collaborative effort signifies a shared vision of a future when AI agents, regardless of their
-            underlying technologies, can seamlessly collaborate to automate complex enterprise workflows and drive
-            unprecedented levels of efficiency and innovation.
-          </p>
-          <p className='text-white'>
-            A2A complements Anthropic&apos;s Model Context Protocol (MCP), which provides helpful tools and context to
-            agents. Drawing on Google&apos;s internal expertise in scaling agentic systems, the A2A protocol addresses
-            the challenges identified in deploying large-scale, multi-agent systems for customers.
-          </p>
+          <h2 className='mb-4 text-2xl font-semibold text-white'>{t('protocol-title')}</h2>
+          <p className='mb-4 text-white'>{t('protocol-p1')}</p>
+          <p className='mb-4 text-white'>{t('protocol-p2')}</p>
+          <p className='text-white'>{t('protocol-p3')}</p>
         </div>
 
         <div className='mb-12 rounded-lg bg-gray-800 p-6'>
-          <h2 className='mb-4 text-2xl font-semibold text-white'>A2A Design Principles</h2>
-          <p className='mb-6 text-white'>The A2A protocol adheres to five key design principles:</p>
+          <h2 className='mb-4 text-2xl font-semibold text-white'>{t('principles-title')}</h2>
+          <p className='mb-6 text-white'>{t('principles-intro')}</p>
           <div className='space-y-6'>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>1. Embrace Agentic Capabilities</h3>
-              <p className='text-gray-300'>
-                A2A focuses on enabling agents to collaborate in their natural, unstructured modalities, even when they
-                don&apos;t share memory, tools and context. This enables true multi-agent scenarios without limiting an
-                agent to a &quot;tool.&quot;
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('principles.1.title')}</h3>
+              <p className='text-gray-300'>{t('principles.1.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>2. Build on Existing Standards</h3>
-              <p className='text-gray-300'>
-                The protocol is built on top of existing, popular standards including HTTP, SSE, JSON-RPC, which means
-                it&apos;s easier to integrate with existing IT stacks businesses already use daily.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('principles.2.title')}</h3>
+              <p className='text-gray-300'>{t('principles.2.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>3. Secure by Default</h3>
-              <p className='text-gray-300'>
-                A2A is designed to support enterprise-grade authentication and authorization, with parity to
-                OpenAPI&apos;s authentication schemes at launch.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('principles.3.title')}</h3>
+              <p className='text-gray-300'>{t('principles.3.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>4. Support for Long-Running Tasks</h3>
-              <p className='text-gray-300'>
-                A2A is designed to be flexible and support scenarios where it excels at completing everything from quick
-                tasks to deep research that may take hours or even days when humans are in the loop. Throughout this
-                process, A2A can provide real-time feedback, notifications, and state updates to its users.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('principles.4.title')}</h3>
+              <p className='text-gray-300'>{t('principles.4.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>5. Modality Agnostic</h3>
-              <p className='text-gray-300'>
-                The agentic world isn&apos;t limited to just text, which is why A2A is designed to support various
-                modalities, including audio and video streaming.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('principles.5.title')}</h3>
+              <p className='text-gray-300'>{t('principles.5.description')}</p>
             </div>
           </div>
         </div>
 
         <div className='mb-12 rounded-lg bg-gray-800 p-6'>
-          <h2 className='mb-4 text-2xl font-semibold text-white'>How A2A Works</h2>
-          <p className='mb-6 text-white'>
-            A2A facilitates communication between a &quot;client&quot; agent and a &quot;remote&quot; agent. A client
-            agent is responsible for formulating and communicating tasks, while the remote agent is responsible for
-            acting on those tasks in an attempt to provide the correct information or take the correct action. This
-            interaction involves several key capabilities:
-          </p>
+          <h2 className='mb-4 text-2xl font-semibold text-white'>{t('how-works-title')}</h2>
+          <p className='mb-6 text-white'>{t('how-works-intro')}</p>
           <div className='space-y-6'>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>Capability Discovery</h3>
-              <p className='text-gray-300'>
-                Agents can advertise their capabilities using an &quot;Agent Card&quot; in JSON format, allowing the
-                client agent to identify the best agent that can perform a task and leverage A2A to communicate with the
-                remote agent.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('how-works.1.title')}</h3>
+              <p className='text-gray-300'>{t('how-works.1.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>Task Management</h3>
-              <p className='text-gray-300'>
-                The communication between a client and remote agent is oriented towards task completion, in which agents
-                work to fulfill end-user requests. This &quot;task&quot; object is defined by the protocol and has a
-                lifecycle. It can be completed immediately or, for long-running tasks, each of the agents can
-                communicate to stay in sync with each other on the latest status of completing a task. The output of a
-                task is known as an &quot;artifact.&quot;
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('how-works.2.title')}</h3>
+              <p className='text-gray-300'>{t('how-works.2.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>Collaboration</h3>
-              <p className='text-gray-300'>
-                Agents can send each other messages to communicate context, replies, artifacts, or user instructions.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('how-works.3.title')}</h3>
+              <p className='text-gray-300'>{t('how-works.3.description')}</p>
             </div>
             <div>
-              <h3 className='mb-2 text-xl font-semibold text-white'>User Experience Negotiation</h3>
-              <p className='text-gray-300'>
-                Each message includes &quot;parts,&quot; which is a fully formed piece of content, like a generated
-                image. Each part has a specified content type, allowing client and remote agents to negotiate the
-                correct format needed and explicitly include negotiations of the user&apos;s UI capabilities–e.g.,
-                iframes, video, web forms, and more.
-              </p>
+              <h3 className='mb-2 text-xl font-semibold text-white'>{t('how-works.4.title')}</h3>
+              <p className='text-gray-300'>{t('how-works.4.description')}</p>
             </div>
           </div>
         </div>
@@ -150,14 +99,14 @@ export default async function OverviewPage() {
             href='/specification'
             className='flex items-center justify-center gap-2 rounded-[9px] border border-white px-4 py-2 text-sm hover:opacity-70'
           >
-            View Technical Specification
+            {t('view-specification')}
             <CircleChevronRight className='h-[16px] w-[16px]' />
           </Link>
           <Link
             href='/agents'
             className='flex items-center justify-center gap-2 rounded-[9px] border border-white px-4 py-2 text-sm hover:opacity-70'
           >
-            Explore Agents
+            {t('explore-agents')}
             <CircleChevronRight className='h-[16px] w-[16px]' />
           </Link>
         </div>
