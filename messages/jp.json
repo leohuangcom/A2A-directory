@@ -101,14 +101,17 @@
     "goHome": "ホームへ"
   },
   "Home": {
-    "title": "A2A - Agent2Agentプロトコル",
-    "subTitle": "エージェントが相互に通信するための協力的な方法",
+    "title": "A2A - エージェント間プロトコル",
+    "subTitle": "エージェント相互運用性のための協調的アプローチ",
     "a2a-introduction": "A2Aプロトコルについて",
     "a2a-features": "主な特徴",
     "a2a-partners": "注目のA2Aエージェント",
     "a2a-cases": "実際の使用例",
     "exploreMore": "もっと探索する",
-    "viewAllPartners": "すべてのA2Aエージェントを見る"
+    "viewAllPartners": "すべてのA2Aエージェントを見る",
+    "protocol-p1": "Agent2Agent（A2A）プロトコルは、50を超えるテクノロジーパートナーのサポートを受けてGoogle Cloudによって開発されたオープンプロトコルです。AIエージェントが相互に通信し、安全に情報を交換し、さまざまな企業プラットフォームやアプリケーション上でアクションを調整することを可能にします。",
+    "protocol-p2": "このプロトコルはAnthropicのModel Context Protocol（MCP）を補完し、大規模なマルチエージェントシステムの展開の課題に対処するように設計されています。A2Aは開発者がプロトコルを使用して構築された他のエージェントと接続できるエージェントを構築することを可能にします。",
+    "learn-more": "もっと詳しく"
   },
   "Submit": {
     "title": "AIツールを提出する",

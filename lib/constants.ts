@@ -8,7 +8,7 @@ export const NAV_LINKS = [
     href: '/specification',
   },
   {
-    code: 'partners',
+    code: 'agents',
     href: '/agents',
   },
   {

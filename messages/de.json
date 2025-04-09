@@ -118,10 +118,17 @@
     "goHome": "Zur Startseite"
   },
   "Home": {
-    "title": "Tap4 AI - Entdecken Sie die besten KI-Tools 2024",
-    "subTitle": "Holen Sie sich Ihre Lieblings-KI-Tools im Tap4 AI Tools Verzeichnis. Die Liste der KI-Tools wird täglich von GPT-4o aktualisiert. Es ist kostenlos, sie hier einzureichen, um Ihr SEO jetzt zu verbessern.",
-    "ai-navigate": "KI-Tools Liste",
-    "exploreMore": "Weitere KI-Tools entdecken"
+    "title": "A2A - Agent2Agent-Protokoll",
+    "subTitle": "Ein kollaborativer Ansatz für die Kommunikation zwischen Agenten",
+    "a2a-introduction": "Über das A2A-Protokoll",
+    "a2a-features": "Hauptmerkmale",
+    "a2a-partners": "Ausgewählte A2A-Agenten",
+    "a2a-cases": "Reale Anwendungsfälle",
+    "exploreMore": "Mehr erkunden",
+    "viewAllPartners": "Alle A2A-Agenten anzeigen",
+    "protocol-p1": "Das Agent2Agent (A2A) Protokoll ist ein offenes Protokoll, entwickelt von Google Cloud mit Unterstützung von über 50 Technologiepartnern. Es ermöglicht KI-Agenten, miteinander zu kommunizieren, Informationen sicher auszutauschen und Aktionen über verschiedene Plattformen und Unternehmensanwendungen hinweg zu koordinieren.",
+    "protocol-p2": "Das Protokoll ergänzt Anthropics Model Context Protocol (MCP) und adressiert die Herausforderungen bei der Implementierung von Multi-Agenten-Systemen im großen Maßstab. A2A ermöglicht es Entwicklern, Agenten zu erstellen, die sich mit jedem anderen Agenten verbinden können, der mit diesem Protokoll gebaut wurde.",
+    "learn-more": "Mehr erfahren"
   },
   "Submit": {
     "title": "Reichen Sie Ihr KI-Tool ein",

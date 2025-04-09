@@ -130,7 +130,10 @@
     "a2a-partners": "精选A2A智能体",
     "a2a-cases": "真实应用案例",
     "exploreMore": "探索更多",
-    "viewAllPartners": "查看所有A2A智能体"
+    "viewAllPartners": "查看所有A2A智能体",
+    "protocol-p1": "Agent2Agent (A2A) 协议是由Google Cloud在50多个技术合作伙伴的支持下开发的开放协议。它允许AI智能体相互通信，安全地交换信息，并在各种企业平台或应用程序上协调行动。",
+    "protocol-p2": "该协议补充了Anthropic的Model Context Protocol (MCP)，旨在解决部署大规模多智能体系统的挑战。A2A使开发者能够构建可以与任何其他使用该协议构建的智能体连接的智能体。",
+    "learn-more": "了解更多"
   },
   "Submit": {
     "title": "提交您的AI工具",

@@ -130,7 +130,10 @@
     "a2a-partners": "Featured A2A Agents",
     "a2a-cases": "Real-World Use Cases",
     "exploreMore": "Explore More",
-    "viewAllPartners": "View All A2A Agents"
+    "viewAllPartners": "View All A2A Agents",
+    "protocol-p1": "Agent2Agent Protocol (A2A) is a new, open protocol launched by Google Cloud with support from over 50 technology partners. It enables AI agents to communicate with each other, securely exchange information, and coordinate actions across enterprise platforms and applications.",
+    "protocol-p2": "The protocol complements Anthropic's Model Context Protocol (MCP) and is designed to address the challenges of deploying large-scale, multi-agent systems. A2A empowers developers to build agents that can connect with any other agent built using the protocol.",
+    "learn-more": "Learn More"
   },
   "Submit": {
     "title": "Submit your AI Tool",

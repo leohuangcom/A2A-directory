@@ -19,7 +19,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('description'),
     keywords: t('keywords'),
     alternates: {
-      canonical: './case-studies',
+      canonical: '/case-studies',
     },
   };
 }

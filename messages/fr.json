@@ -118,10 +118,17 @@
     "goHome": "Retour à l'accueil"
   },
   "Home": {
-    "title": "Tap4 AI - Découvrez les meilleurs outils AI de 2024",
-    "subTitle": "Trouvez vos outils AI préférés dans le Répertoire des outils AI de Tap4. La liste des outils AI est mise à jour quotidiennement par GPT-4o. Soumettez gratuitement maintenant pour améliorer votre SEO.",
-    "ai-navigate": "Liste des outils AI",
-    "exploreMore": "Obtenez plus d'outils AI"
+    "title": "A2A - Protocole Agent à Agent",
+    "subTitle": "Une approche collaborative de l'interopérabilité des agents",
+    "a2a-introduction": "À propos du protocole A2A",
+    "a2a-features": "Fonctionnalités principales",
+    "a2a-partners": "Agents A2A populaires",
+    "a2a-cases": "Études de cas réels",
+    "exploreMore": "Explorer davantage",
+    "viewAllPartners": "Voir tous les agents A2A",
+    "protocol-p1": "Le protocole Agent-à-Agent (A2A) est un protocole ouvert développé par Google Cloud avec le soutien de plus de 50 partenaires technologiques. Il permet aux agents d'IA de communiquer entre eux, de partager des données en toute sécurité et de coordonner des actions sur différentes plateformes et applications professionnelles.",
+    "protocol-p2": "Ce protocole complète le Protocole de Contexte de Modèle (MCP) d'Anthropic et résout les défis de déploiement de systèmes multi-agents à grande échelle. A2A permet aux développeurs de créer des agents qui peuvent se connecter à n'importe quel autre agent construit avec ce protocole.",
+    "learn-more": "En savoir plus"
   },
   "Submit": {
     "title": "Soumettez votre outil AI",

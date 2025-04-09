@@ -121,9 +121,9 @@
     "goHome": "返回首頁"
   },
   "Home": {
-    "title": "A2A - Agent2Agent協議",
-    "subTitle": "幫助智能體相互通信的協作方式",
-    "a2a-introduction": "關於A2A協議",
+    "title": "A2A - 代理人對代理人協定",
+    "subTitle": "代理人互通性的協作方法",
+    "a2a-introduction": "關於 A2A 協定",
     "a2a-features": "主要特點",
     "a2a-partners": "精選A2A智能體",
     "a2a-cases": "真實應用案例",

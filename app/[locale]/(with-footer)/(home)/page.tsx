@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('description'),
     keywords: t('keywords'),
     alternates: {
-      canonical: './',
+      canonical: '/',
     },
   };
 }
@@ -46,22 +46,14 @@ export default async function Page() {
         <div className='mb-10'>
           <h2 className='mb-4 text-center text-[18px] lg:text-[32px]'>{t('a2a-introduction')}</h2>
           <div className='rounded-lg bg-gray-800 p-6'>
-            <p className='mb-4 text-white'>
-              Agent2Agent Protocol (A2A) is a new, open protocol launched by Google Cloud with support from over 50
-              technology partners. It enables AI agents to communicate with each other, securely exchange information,
-              and coordinate actions across enterprise platforms and applications.
-            </p>
-            <p className='text-white'>
-              The protocol complements Anthropic&apos;s Model Context Protocol (MCP) and is designed to address the
-              challenges of deploying large-scale, multi-agent systems. A2A empowers developers to build agents that can
-              connect with any other agent built using the protocol.
-            </p>
+            <p className='mb-4 text-white'>{t('protocol-p1')}</p>
+            <p className='text-white'>{t('protocol-p2')}</p>
             <div className='mt-4 flex justify-center'>
               <Link
                 href='/overview'
                 className='flex items-center justify-center gap-2 rounded-[9px] border border-white px-4 py-2 text-sm hover:opacity-70'
               >
-                Learn More
+                {t('learn-more')}
                 <CircleChevronRight className='h-[16px] w-[16px]' />
               </Link>
             </div>
