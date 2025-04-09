@@ -21,7 +21,7 @@ export default function Footer() {
           <Link href='/a2a/specification' className='hover:text-white'>
             Documentation
           </Link>
-          <Link href='/a2a/partners' className='hover:text-white'>
+          <Link href='/a2a/agents' className='hover:text-white'>
             Agents
           </Link>
         </div>

@@ -9,7 +9,7 @@ export const NAV_LINKS = [
   },
   {
     code: 'partners',
-    href: '/a2a/partners',
+    href: '/a2a/agents',
   },
   {
     code: 'case-studies',

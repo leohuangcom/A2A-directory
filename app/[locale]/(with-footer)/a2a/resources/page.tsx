@@ -184,12 +184,20 @@ clientAgent.onTaskUpdate(task.id, (update) => {
           </p>
         </div>
 
+        <div className='mb-4 text-gray-300'>
+          Ready to join the A2A ecosystem? View the
+          <Link href='/a2a/agents' className='ml-1 text-blue-400 hover:underline'>
+            A2A Agents Directory
+          </Link>
+          or get started with the reference implementation.
+        </div>
+
         <div className='mb-8 flex justify-center gap-4'>
           <Link
-            href='/a2a/partners'
+            href='/a2a/agents'
             className='flex items-center justify-center gap-2 rounded-[9px] border border-white px-4 py-2 text-sm hover:opacity-70'
           >
-            Agent Solutions
+            Explore A2A Agents
             <CircleChevronRight className='h-[16px] w-[16px]' />
           </Link>
           <Link

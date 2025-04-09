@@ -73,7 +73,7 @@ export default async function Page() {
           <h2 className='mb-4 text-center text-[18px] lg:text-[32px]'>{t('a2a-partners')}</h2>
           <WebNavCardList dataList={res.rows} />
           <Link
-            href='/a2a/partners'
+            href='/a2a/agents'
             className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-white p-[10px] text-sm leading-4 hover:opacity-70'
           >
             {t('viewAllPartners')}

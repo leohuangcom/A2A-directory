@@ -180,20 +180,25 @@
         "description": "A2A协议的详细技术文档，包括架构、数据模型和实施指南。",
         "keywords": "A2A协议, 技术规范, API, 实施"
       },
+      "resources": {
+        "title": "A2A协议资源与文档",
+        "description": "A2A协议的开发者资源、文档、代码示例和实施指南。",
+        "keywords": "A2A文档, 开发者资源, 实施指南"
+      },
+      "case-studies": {
+        "title": "A2A协议案例研究与应用",
+        "description": "各行业中A2A协议实际应用的真实示例和用例。",
+        "keywords": "A2A用例, AI代理应用, 行业解决方案"
+      },
       "partners": {
         "title": "A2A协议代理与生态系统",
         "description": "探索为A2A协议生态系统做出贡献的50多个技术合作伙伴和服务提供商。",
         "keywords": "A2A代理, 技术合作伙伴, 服务提供商, AI生态系统"
       },
-      "caseStudies": {
-        "title": "A2A协议案例研究与应用",
-        "description": "各行业中A2A协议实际应用的真实示例和用例。",
-        "keywords": "A2A用例, AI代理应用, 行业解决方案"
-      },
-      "resources": {
-        "title": "A2A协议资源与文档",
-        "description": "A2A协议的开发者资源、文档、代码示例和实施指南。",
-        "keywords": "A2A文档, 开发者资源, 实施指南"
+      "agents": {
+        "title": "A2A 代理目录 | Agent2Agent 协议",
+        "description": "探索支持 A2A 协议的 A2A 兼容代理和服务提供商的不断增长的生态系统。",
+        "keywords": "A2A 代理, A2A 目录, 代理兼容性, A2A 服务提供商, AI 互操作性"
       }
     },
     "ai": {
