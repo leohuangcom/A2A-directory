@@ -6,7 +6,7 @@
     "title": "A2A 协议目录",
     "overview": "概述",
     "specification": "技术规范",
-    "partners": "代理",
+    "partners": "智能体",
     "case-studies": "案例研究",
     "resources": "资源",
     "explore": "探索",
@@ -16,7 +16,7 @@
   },
   "Footer": {
     "title": "A2A 协议目录",
-    "subTitle": "Agent2Agent (A2A) 协议的官方目录 - 代理互操作性的开放框架",
+    "subTitle": "Agent2Agent (A2A) 协议的官方目录 - 智能体互操作性的开放框架",
     "support": "支持",
     "privacy": "隐私政策",
     "termsConditions": "条款和条件",
@@ -26,17 +26,17 @@
     "title": "常见问题",
     "1": {
       "question": "什么是A2A协议？",
-      "answer": "Agent2Agent (A2A) 协议是由Google Cloud在50多个技术合作伙伴的支持下开发的开放协议。它允许AI代理相互通信，安全地交换信息，并在各种企业平台或应用程序上协调行动。"
+      "answer": "Agent2Agent (A2A) 协议是由Google Cloud在50多个技术合作伙伴的支持下开发的开放协议。它允许AI智能体相互通信，安全地交换信息，并在各种企业平台或应用程序上协调行动。"
     },
     "2": {
       "question": "A2A协议如何运作？",
-      "answer-1": "1. A2A促进\"客户端\"代理和\"远程\"代理之间的通信。",
-      "answer-2": "2. 代理可以使用JSON格式的\"代理卡\"来公布其功能。",
-      "answer-3": "3. 代理通过任务对象进行通信，并能交换包含上下文、回复和成果物的消息。"
+      "answer-1": "1. A2A促进\"客户端\"智能体和\"远程\"智能体之间的通信。",
+      "answer-2": "2. 智能体可以使用JSON格式的\"智能体卡\"来公布其功能。",
+      "answer-3": "3. 智能体通过任务对象进行通信，并能交换包含上下文、回复和成果物的消息。"
     },
     "3": {
       "question": "A2A协议的主要特点是什么？",
-      "answer-1": "1. 代理能力：使代理能够在自然、非结构化的模式中协作。",
+      "answer-1": "1. 智能体能力：使智能体能够在自然、非结构化的模式中协作。",
       "answer-2": "2. 基于现有标准：使用HTTP、SSE、JSON-RPC便于集成。",
       "answer-3": "3. 企业级安全：支持强大的身份验证和授权。",
       "answer-4": "4. 支持长时间运行的任务：灵活处理快速任务和复杂操作。",
@@ -60,7 +60,7 @@
     },
     "8": {
       "question": "A2A协议是否支持多语言通信？",
-      "answer": "是的，A2A协议支持代理之间的多语言通信，允许它们以各种语言交换信息并根据需要进行翻译。"
+      "answer": "是的，A2A协议支持智能体之间的多语言通信，允许它们以各种语言交换信息并根据需要进行翻译。"
     },
     "9": {
       "question": "A2A协议如何处理安全和隐私问题？",
@@ -71,8 +71,8 @@
       "answer": "当然可以。A2A协议欢迎开发者和组织的贡献。您可以通过代码贡献、文档改进或分享反馈和使用案例来参与。"
     },
     "11": {
-      "question": "A2A协议与其他代理通信框架有何不同？",
-      "answer": "A2A协议专注于企业需求，强调安全性、可扩展性和标准化。它建立在现有的网络标准之上，专为跨组织边界的AI代理协作而设计。"
+      "question": "A2A协议与其他智能体通信框架有何不同？",
+      "answer": "A2A协议专注于企业需求，强调安全性、可扩展性和标准化。它建立在现有的网络标准之上，专为跨组织边界的AI智能体协作而设计。"
     }
   },
   "FooterNavigation": {
@@ -124,13 +124,13 @@
   },
   "Home": {
     "title": "A2A - Agent2Agent协议",
-    "subTitle": "帮助代理相互通信的协作方式",
+    "subTitle": "帮助智能体相互通信的协作方式",
     "a2a-introduction": "关于A2A协议",
     "a2a-features": "主要特点",
-    "a2a-partners": "精选A2A代理",
+    "a2a-partners": "精选A2A智能体",
     "a2a-cases": "真实应用案例",
     "exploreMore": "探索更多",
-    "viewAllPartners": "查看所有A2A代理"
+    "viewAllPartners": "查看所有A2A智能体"
   },
   "Submit": {
     "title": "提交您的AI工具",
@@ -166,13 +166,13 @@
   "Metadata": {
     "home": {
       "title": "A2A Agents | a2a.plus",
-      "description": "Agent2Agent (A2A) 协议的官方目录 - 由Google Cloud与50多个技术合作伙伴共同开发的代理互操作性开放框架。",
-      "keywords": "A2A协议, Agent2Agent, AI代理, 代理互操作性, Google Cloud"
+      "description": "Agent2Agent (A2A) 协议的官方目录 - 由Google Cloud与50多个技术合作伙伴共同开发的智能体互操作性开放框架。",
+      "keywords": "A2A协议, Agent2Agent, AI智能体, 智能体互操作性, Google Cloud"
     },
     "overview": {
       "title": "A2A Agents | a2a.plus",
-      "description": "了解A2A协议 - AI系统跨平台通信和协作的新时代代理互操作性。",
-      "keywords": "A2A协议, AI代理, 互操作性, Agent2Agent"
+      "description": "了解A2A协议 - AI系统跨平台通信和协作的新时代智能体互操作性。",
+      "keywords": "A2A协议, AI智能体, 互操作性, Agent2Agent"
     },
     "specification": {
       "title": "A2A Agents | a2a.plus",
@@ -187,17 +187,17 @@
     "case-studies": {
       "title": "A2A Agents | a2a.plus",
       "description": "各行业中A2A协议实际应用的真实示例和用例。",
-      "keywords": "A2A用例, AI代理应用, 行业解决方案"
+      "keywords": "A2A用例, AI智能体应用, 行业解决方案"
     },
     "partners": {
       "title": "A2A Agents | a2a.plus",
       "description": "探索为A2A协议生态系统做出贡献的50多个技术合作伙伴和服务提供商。",
-      "keywords": "A2A代理, 技术合作伙伴, 服务提供商, AI生态系统"
+      "keywords": "A2A智能体, 技术合作伙伴, 服务提供商, AI生态系统"
     },
     "agents": {
       "title": "A2A Agents | a2a.plus",
-      "description": "探索支持 A2A 协议的 A2A 兼容代理和服务提供商的不断增长的生态系统。",
-      "keywords": "A2A 代理, A2A 目录, 代理兼容性, A2A 服务提供商, AI 互操作性"
+      "description": "探索支持 A2A 协议的 A2A 兼容智能体和服务提供商的不断增长的生态系统。",
+      "keywords": "A2A 智能体, A2A 目录, 智能体兼容性, A2A 服务提供商, AI 互操作性"
     },
     "ai": {
       "titleSubfix": "Tap4 AI目录"
@@ -206,21 +206,21 @@
       "title": "A2A Agents | a2a.plus",
       "titlePrefix": "探索A2A协议目录",
       "titleSuffix": "A2A协议目录",
-      "description": "发现Agent2Agent (A2A) 协议及其实现的更多详情。该协议旨在实现AI代理之间的互操作性。",
-      "keywords": "A2A协议, AI代理, 互操作性"
+      "description": "发现Agent2Agent (A2A) 协议及其实现的更多详情。该协议旨在实现AI智能体之间的互操作性。",
+      "keywords": "A2A协议, AI智能体, 互操作性"
     },
     "submit": {
       "title": "A2A Agents | a2a.plus"
     }
   },
   "Agents": {
-    "directory": "A2A 代理目录",
-    "explore-description": "探索支持 A2A 协议的兼容代理不断发展的生态系统。",
-    "agents-title": "A2A 代理",
+    "directory": "A2A 智能体目录",
+    "explore-description": "探索支持 A2A 协议的兼容智能体不断发展的生态系统。",
+    "agents-title": "A2A 智能体",
     "join-ecosystem": "加入 A2A 生态系统",
     "join-description": "如果您的组织有兴趣加入 A2A 协议生态系统，您可以通过以下几种方式做出贡献：",
     "contribute-1": "在您的产品中实施 A2A 协议",
-    "contribute-2": "创建您自己的 A2A 兼容代理",
+    "contribute-2": "创建您自己的 A2A 兼容智能体",
     "contribute-3": "为协议规范做出贡献",
     "contribute-4": "分享案例研究和实施示例",
     "contribute-5": "参与 A2A 社区",
