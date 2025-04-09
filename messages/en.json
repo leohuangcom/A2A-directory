@@ -212,5 +212,66 @@
     "submit": {
       "title": "Submit your AI tool and get Get Traffic | Tap4 AI Directory"
     }
+  },
+  "Agents": {
+    "directory": "A2A Agents Directory",
+    "explore-description": "Explore the growing ecosystem of A2A compatible agents supporting the A2A Protocol.",
+    "agents-title": "A2A Agents",
+    "join-ecosystem": "Join the A2A Ecosystem",
+    "join-description": "If your organization is interested in joining the A2A Protocol ecosystem, you can contribute in several ways:",
+    "contribute-1": "Implement the A2A Protocol in your products",
+    "contribute-2": "Create your own A2A-compatible agents",
+    "contribute-3": "Contribute to the protocol specification",
+    "contribute-4": "Share case studies and implementation examples",
+    "contribute-5": "Participate in the A2A community",
+    "get-started": "Get Started with A2A"
+  },
+  "CaseStudies": {
+    "title": "A2A Protocol Case Studies",
+    "description": "Real-world examples of how the Agent2Agent Protocol is transforming business processes and workflows.",
+    "common": {
+      "challenge": "Challenge",
+      "solution": "A2A Solution",
+      "results": "Results"
+    },
+    "case1": {
+      "title": "Candidate Sourcing with A2A",
+      "challenge": "Hiring managers spend significant time sourcing candidates, reviewing resumes, and coordinating interviews, with information scattered across multiple systems and platforms.",
+      "solution": "With A2A, a unified interface like Agentspace allows a hiring manager to task their agent to find candidates matching specific criteria. The agent then:",
+      "steps": {
+        "1": "Communicates with specialized recruiting agents",
+        "2": "Sources potential candidates across different platforms",
+        "3": "Coordinates interviews and follow-ups",
+        "4": "Manages the entire hiring workflow"
+      },
+      "results": "Hiring managers save hours per position, candidates receive faster responses, and the entire process becomes more transparent and efficient, with all information centralized and accessible."
+    },
+    "case2": {
+      "title": "Supply Chain Optimization",
+      "challenge": "Supply chain managers deal with multiple systems, vendors, and unpredictable variables when planning logistics and inventory management, leading to inefficiencies and increased costs.",
+      "solution": "A2A enables supply chain agents to communicate across different systems:",
+      "steps": {
+        "1": "Inventory management agents share real-time stock levels",
+        "2": "Logistics agents provide transportation options and timelines",
+        "3": "Vendor management agents negotiate pricing and availability",
+        "4": "Weather and external event agents predict potential disruptions"
+      },
+      "results": "Companies using A2A for supply chain management report reduced inventory costs, faster delivery times, fewer stockouts, and better resilience to supply chain disruptions."
+    },
+    "case3": {
+      "title": "Customer Service Enhancement",
+      "challenge": "Customer service representatives often need to access multiple systems and databases to resolve customer issues, leading to longer wait times and frustrated customers.",
+      "solution": "A customer service agent enhanced with A2A capabilities can:",
+      "steps": {
+        "1": "Communicate with order management systems to check status",
+        "2": "Interact with product knowledge bases for detailed information",
+        "3": "Coordinate with shipping and logistics agents for delivery updates",
+        "4": "Interface with billing systems to resolve payment issues",
+        "5": "Document interactions in CRM systems automatically"
+      },
+      "results": "Customer service departments implementing A2A report 40% faster resolution times, higher customer satisfaction scores, and reduced training time for new representatives."
+    },
+    "explore-agents": "Explore A2A Agents",
+    "implementation-resources": "Implementation Resources"
   }
 }

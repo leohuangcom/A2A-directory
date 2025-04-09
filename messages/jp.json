@@ -190,5 +190,18 @@
     "submit": {
       "title": "A2Aプロトコルに参加する | A2Aプロトコルディレクトリ"
     }
+  },
+  "Agents": {
+    "directory": "A2A エージェントディレクトリ",
+    "explore-description": "A2A プロトコルをサポートする A2A 互換エージェントの成長するエコシステムを探索してください。",
+    "agents-title": "A2A エージェント",
+    "join-ecosystem": "A2A エコシステムに参加する",
+    "join-description": "あなたの組織が A2A プロトコルエコシステムへの参加に興味がある場合、いくつかの方法で貢献できます：",
+    "contribute-1": "製品に A2A プロトコルを実装する",
+    "contribute-2": "独自の A2A 互換エージェントを作成する",
+    "contribute-3": "プロトコル仕様に貢献する",
+    "contribute-4": "ケーススタディと実装例を共有する",
+    "contribute-5": "A2A コミュニティに参加する",
+    "get-started": "A2A を始める"
   }
 }

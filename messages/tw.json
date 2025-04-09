@@ -210,5 +210,18 @@
     "submit": {
       "title": "加入A2A協議 | A2A協議目錄"
     }
+  },
+  "Agents": {
+    "directory": "A2A 代理目錄",
+    "explore-description": "探索支持 A2A 協議的兼容代理不斷發展的生態系統。",
+    "agents-title": "A2A 代理",
+    "join-ecosystem": "加入 A2A 生態系統",
+    "join-description": "如果您的組織有興趣加入 A2A 協議生態系統，您可以通過以下幾種方式做出貢獻：",
+    "contribute-1": "在您的產品中實施 A2A 協議",
+    "contribute-2": "創建您自己的 A2A 兼容代理",
+    "contribute-3": "為協議規範做出貢獻",
+    "contribute-4": "分享案例研究和實施示例",
+    "contribute-5": "參與 A2A 社區",
+    "get-started": "開始使用 A2A"
   }
 }
