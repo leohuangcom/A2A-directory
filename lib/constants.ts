@@ -1,23 +1,23 @@
 export const NAV_LINKS = [
   {
     code: 'overview',
-    href: '/a2a/overview',
+    href: '/overview',
   },
   {
     code: 'specification',
-    href: '/a2a/specification',
+    href: '/specification',
   },
   {
     code: 'partners',
-    href: '/a2a/agents',
+    href: '/agents',
   },
   {
     code: 'case-studies',
-    href: '/a2a/case-studies',
+    href: '/case-studies',
   },
   {
     code: 'resources',
-    href: '/a2a/resources',
+    href: '/resources',
   },
   {
     code: 'explore',

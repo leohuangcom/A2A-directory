@@ -15,13 +15,13 @@ export default function Footer() {
           <Link href='/' className='hover:text-white'>
             A2A Protocol
           </Link>
-          <Link href='/a2a/overview' className='hover:text-white'>
+          <Link href='/overview' className='hover:text-white'>
             Overview
           </Link>
-          <Link href='/a2a/specification' className='hover:text-white'>
+          <Link href='/specification' className='hover:text-white'>
             Documentation
           </Link>
-          <Link href='/a2a/agents' className='hover:text-white'>
+          <Link href='/agents' className='hover:text-white'>
             Agents
           </Link>
         </div>
@@ -30,7 +30,7 @@ export default function Footer() {
       <div className='flex flex-col gap-4'>
         <div className='mt-2 flex flex-col gap-3 text-white/60'>
           <h4 className='text-lg font-semibold text-white'>{t('support')}</h4>
-          <Link href='/a2a/resources' className='hover:text-white'>
+          <Link href='/resources' className='hover:text-white'>
             Resources
           </Link>
           <Link href='mailto:contact@a2a-protocol.dev' className='hover:text-white'>
