@@ -130,7 +130,7 @@
     "a2a-partners": "Featured A2A Servers",
     "a2a-cases": "Real-World Use Cases",
     "exploreMore": "Explore More",
-    "viewAllPartners": "View All Partners"
+    "viewAllPartners": "View All A2A Servers"
   },
   "Submit": {
     "title": "Submit your AI Tool",
@@ -181,9 +181,9 @@
         "keywords": "A2A Protocol, Technical Specification, API, Implementation"
       },
       "partners": {
-        "title": "A2A Protocol Partners & Ecosystem",
-        "description": "Explore the 50+ technology partners and service providers contributing to the A2A Protocol ecosystem.",
-        "keywords": "A2A Partners, Technology Partners, Service Providers, AI Ecosystem"
+        "title": "A2A Servers Directory & Ecosystem",
+        "description": "Explore the A2A compatible servers and service providers supporting the A2A Protocol ecosystem.",
+        "keywords": "A2A Servers, A2A Directory, Service Providers, AI Ecosystem"
       },
       "caseStudies": {
         "title": "A2A Protocol Case Studies & Applications",

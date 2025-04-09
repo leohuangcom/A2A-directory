@@ -105,10 +105,10 @@
     "subTitle": "Agent2Agent（A2A）プロトコルの公式ディレクトリ - プラットフォームとベンダー間でAIエージェントのシームレスな連携を実現",
     "a2a-introduction": "A2Aプロトコルについて",
     "a2a-features": "主な特徴",
-    "a2a-partners": "注目のパートナー",
-    "a2a-cases": "実際のユースケース",
-    "exploreMore": "詳細を探る",
-    "viewAllPartners": "すべてのパートナーを見る"
+    "a2a-partners": "注目のA2Aサーバー",
+    "a2a-cases": "実際の使用例",
+    "exploreMore": "もっと探索する",
+    "viewAllPartners": "すべてのA2Aサーバーを見る"
   },
   "Submit": {
     "title": "AIツールを提出する",

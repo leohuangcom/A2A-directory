@@ -35,14 +35,14 @@ export default async function PartnersPage() {
     <div className='relative w-full'>
       <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
         <div className='my-8'>
-          <h1 className='mb-4 text-center text-3xl font-bold text-white'>A2A Protocol Partners</h1>
+          <h1 className='mb-4 text-center text-3xl font-bold text-white'>A2A Servers Directory</h1>
           <p className='mx-auto mb-8 max-w-3xl text-center text-gray-300'>
-            Explore the growing ecosystem of technology partners and service providers contributing to the A2A Protocol.
+            Explore the growing ecosystem of A2A compatible servers and service providers supporting the A2A Protocol.
           </p>
         </div>
 
         <div className='mb-12'>
-          <h2 className='mb-6 text-center text-2xl font-semibold text-white'>Technology Partners</h2>
+          <h2 className='mb-6 text-center text-2xl font-semibold text-white'>Featured A2A Technology Servers</h2>
 
           <div className='mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {/* Highlighted Partners */}
@@ -90,12 +90,12 @@ export default async function PartnersPage() {
             </div>
           </div>
 
-          <h3 className='mb-4 text-xl font-semibold text-white'>All Partners</h3>
+          <h3 className='mb-4 text-xl font-semibold text-white'>All A2A Servers</h3>
           <WebNavCardList dataList={res.rows} />
         </div>
 
         <div className='mb-12'>
-          <h2 className='mb-6 text-center text-2xl font-semibold text-white'>Service Providers</h2>
+          <h2 className='mb-6 text-center text-2xl font-semibold text-white'>A2A Service Providers</h2>
 
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             <div className='rounded-lg bg-gray-800 p-6'>
