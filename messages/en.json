@@ -6,7 +6,7 @@
     "title": "A2A Protocol Directory",
     "overview": "Overview",
     "specification": "Specification",
-    "partners": "Agents",
+    "agents": "Agents",
     "case-studies": "Case Studies",
     "resources": "Resources",
     "explore": "Explore",
@@ -127,10 +127,10 @@
     "subTitle": "A collaborative way to help agents communicate with each other",
     "a2a-introduction": "Agent2Agent Protocol (A2A)",
     "a2a-features": "Key Features",
-    "a2a-partners": "Featured A2A Agents",
+    "a2a-agents": "Featured A2A Agents",
     "a2a-cases": "Real-World Use Cases",
     "exploreMore": "Explore More",
-    "viewAllPartners": "View All A2A Agents",
+    "viewAllAgents": "View All A2A Agents",
     "protocol-p1": "Agent2Agent Protocol (A2A) is a new, open protocol launched by Google Cloud with support from over 50 technology partners. It enables AI agents to communicate with each other, securely exchange information, and coordinate actions across enterprise platforms and applications.",
     "protocol-p2": "The protocol complements Anthropic's Model Context Protocol (MCP) and is designed to address the challenges of deploying large-scale, multi-agent systems. A2A empowers developers to build agents that can connect with any other agent built using the protocol.",
     "learn-more": "Learn More"
@@ -191,11 +191,6 @@
       "title": "A2A Agents | a2a.plus",
       "description": "Real-world examples and use cases of the A2A Protocol in action across various industries.",
       "keywords": "A2A Use Cases, AI Agent Applications, Industry Solutions"
-    },
-    "partners": {
-      "title": "A2A Agents | a2a.plus",
-      "description": "Explore the growing ecosystem of A2A compatible agents and service providers supporting the A2A Protocol.",
-      "keywords": "A2A agents, A2A directory, agent compatibility, A2A service providers, AI interoperability"
     },
     "agents": {
       "title": "A2A Agents | a2a.plus",
