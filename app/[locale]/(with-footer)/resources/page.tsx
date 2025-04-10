@@ -49,9 +49,7 @@ export default async function ResourcesPage() {
                 >
                   A2A Protocol Announcement
                 </a>
-                <p className='mt-1 text-sm text-gray-400'>
-                  Official announcement of the A2A Protocol from Google Cloud
-                </p>
+                <p className='mt-1 text-sm text-gray-400'>Announcement of the A2A Protocol from Google Cloud</p>
               </li>
               <li>
                 <button type='button' className='text-blue-400 hover:underline' onClick={() => {}}>

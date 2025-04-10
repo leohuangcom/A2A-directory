@@ -2,7 +2,7 @@
   "name": "a2a-directory",
   "version": "0.1.0",
   "private": true,
-  "description": "The official directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability",
+  "description": "The awesome directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
