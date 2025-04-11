@@ -5,4 +5,4 @@ const metadata: Metadata = {
   description: 'A2A protocol documentation',
 };
 
-export default metadata; 
+export default metadata;
