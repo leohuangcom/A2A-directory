@@ -2,7 +2,7 @@
 
 * [首页](/)
 * [博客文章](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
-* [技术文档](/documentation.md)
+* [技术文档](/zh-CN/documentation.md)
 * 核心主题
   * [A2A和MCP](/zh-CN/topics/a2a_and_mcp.md)
   * [智能体发现](/zh-CN/topics/agent_discovery.md)

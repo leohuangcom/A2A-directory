@@ -32,6 +32,13 @@
     var langMatch = urlPath.match(/\/([^\/]+)\/docs/);
     var lang = (langMatch && langMatch[1]) ? langMatch[1] : 'en';
     
+    // 直接从window.location.hash获取语言
+    var hashPath = window.location.hash || '';
+    var hashLangMatch = hashPath.match(/#\/([^\/]+)\//);
+    if (hashLangMatch && hashLangMatch[1]) {
+      lang = hashLangMatch[1];
+    }
+    
     window.$docsify = {
       loadSidebar: true,
       loadNavbar: false,  /* Disable top navigation bar */
@@ -43,95 +50,115 @@
       relativePath: true,
       auto2top: true,
       
-      // Simplified content routing configuration to avoid errors
+      // 别名配置，为不同语言设置正确的文档路径
       alias: {
-        // Use simple string paths for type safety
-        '/zh-CN/_sidebar.md': '/zh-CN/_sidebar.md',
-        '/zh-TW/_sidebar.md': '/zh-TW/_sidebar.md',
-        '/ja/_sidebar.md': '/ja/_sidebar.md',
-        '/de/_sidebar.md': '/de/_sidebar.md',
-        '/es/_sidebar.md': '/es/_sidebar.md',
-        '/fr/_sidebar.md': '/fr/_sidebar.md',
-        '/pt/_sidebar.md': '/pt/_sidebar.md',
-        '/ru/_sidebar.md': '/ru/_sidebar.md',
+        // 侧边栏配置
+        '/([^/]+)/_sidebar.md': '/$1/_sidebar.md',
         '/_sidebar.md': '/_sidebar.md',
         
-        // Language homepage mappings
-        '/zh-CN/': '/zh-CN/README.md',
-        '/zh-TW/': '/zh-TW/README.md',
-        '/ja/': '/ja/README.md',
-        '/de/': '/de/README.md',
-        '/es/': '/es/README.md',
-        '/fr/': '/fr/README.md',
-        '/pt/': '/pt/README.md',
-        '/ru/': '/ru/README.md',
-        '/en/': '/en/README.md',
-        '/': '/en/README.md',
+        // 主页配置
+        '/([^/]+)/README.md': '/$1/README.md',
+        '/': '/README.md',
         
-        // Topic document language mappings
-        '/zh-CN/topics/(.*)': '/zh-CN/topics/$1',
-        '/zh-TW/topics/(.*)': '/zh-TW/topics/$1',
-        '/ja/topics/(.*)': '/ja/topics/$1',
-        '/de/topics/(.*)': '/de/topics/$1',
-        '/es/topics/(.*)': '/es/topics/$1',
-        '/fr/topics/(.*)': '/fr/topics/$1',
-        '/pt/topics/(.*)': '/pt/topics/$1',
-        '/ru/topics/(.*)': '/ru/topics/$1'
+        // 文档页面映射 - 针对不同语言
+        '/zh-CN/documentation': '/zh-CN/documentation.md',
+        '/zh-CN/documentation.md': '/zh-CN/documentation.md',
+        '/documentation': '/documentation.md',
+        '/documentation.md': '/documentation.md',
+        
+        // 主题文档映射 - 保留语言前缀
+        '/([^/]+)/topics/(.*)': '/$1/topics/$2',
+        '/topics/(.*)': '/topics/$1'
       },
       
-      // Configure image paths for all languages
+      // 综合处理所有文件路径，包括图片和文档
+      plugins: [
+        function(hook) {
+          // 图片路径处理
+          hook.beforeEach(function(content) {
+            // 替换图片路径，确保使用绝对路径
+            return content
+              .replace(/src="images\//g, 'src="/docs/images/')
+              .replace(/src="\.\.\/images\//g, 'src="/docs/images/')
+              .replace(/src="\.\/images\//g, 'src="/docs/images/');
+          });
+          
+          // 修复内部链接
+          hook.beforeEach(function(content) {
+            return content.replace(/\(topics\//g, '(/topics/');
+          });
+          
+          // 添加语言前缀到所有内部链接
+          hook.doneEach(function() {
+            // 在页面加载完成后处理页面上的所有链接
+            setTimeout(function() {
+              var links = document.querySelectorAll('.markdown-section a');
+              links.forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (href && href.startsWith('/topics/')) {
+                  link.setAttribute('href', '#/' + lang + href);
+                  link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.hash = '#/' + lang + href;
+                  });
+                }
+              });
+            }, 100);
+          });
+        }
+      ],
+      
+      // 图片路径映射
       routes: {
-        '/images/(.*)': '/docs/images/$1',
-        '/zh-CN/images/(.*)': '/docs/images/$1',
-        '/zh-TW/images/(.*)': '/docs/images/$1',
-        '/ja/images/(.*)': '/docs/images/$1',
-        '/de/images/(.*)': '/docs/images/$1',
-        '/es/images/(.*)': '/docs/images/$1',
-        '/fr/images/(.*)': '/docs/images/$1',
-        '/pt/images/(.*)': '/docs/images/$1',
-        '/ru/images/(.*)': '/docs/images/$1',
-        '/en/images/(.*)': '/docs/images/$1'
+        '/([^/]+)/images/(.*)': '/docs/images/$2',
+        '/images/(.*)': '/docs/images/$1'
       },
 
-      // Force the correct language path 
+      // 语言回退
       fallbackLanguages: ['en']
     };
     
-    // Override link behavior to maintain language context
+    // 页面加载时确保正确的语言路径
     window.addEventListener('DOMContentLoaded', function() {
       try {
-        // Get current hash path
+        // 获取当前hash路径
         var currentHash = window.location.hash || '';
         
-        // Check if hash already contains language code
+        // 检查hash是否已包含语言代码
         var hashLangMatch = currentHash.match(/#\/([^\/]+)\//);
         var hashLang = hashLangMatch ? hashLangMatch[1] : null;
         
-        // Only set hash if it's empty or if the hash lang doesn't match URL lang
+        // 特殊处理中文文档路径
+        if (lang === 'zh-CN') {
+          if (currentHash.includes('/documentation') || currentHash === '#/') {
+            // 确保加载中文文档
+            var path = currentHash.includes('/documentation') ? '/documentation' : '/';
+            setTimeout(function() {
+              window.location.hash = '/zh-CN' + path;
+            }, 100);
+            return;
+          }
+        }
+        
+        // 如果hash为空或hash语言与URL语言不匹配，则设置hash
         if (!currentHash || currentHash === '#/' || hashLang !== lang) {
           console.log('Setting language path to: ' + lang);
-          // Use timeout to ensure this runs after Docsify initialization
+          // 使用timeout确保在Docsify初始化后运行
           setTimeout(function() {
             window.location.hash = '/' + lang + '/';
           }, 100);
         }
-        
-        // Monkey patch the link click handler to maintain language context
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          // Check if the clicked element is a link inside the sidebar
-          if (target.tagName === 'A' && target.getAttribute('href') && 
-              target.getAttribute('href').startsWith('/topics/')) {
-            e.preventDefault();
-            // Redirect to the correct language path for the topic
-            var href = target.getAttribute('href');
-            window.location.hash = '#/' + lang + href;
-          }
-        }, true);
       } catch (e) {
         console.error('Error handling language path:', e);
       }
     });
+    
+    // 全局错误处理
+    window.onerror = function(message, source, lineno, colno, error) {
+      console.log('Caught error:', message);
+      // 防止错误打断页面加载
+      return true;
+    };
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>

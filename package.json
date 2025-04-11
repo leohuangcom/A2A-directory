@@ -2,7 +2,7 @@
   "name": "a2a-directory",
   "version": "0.1.0",
   "private": true,
-  "description": "The awesome directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability",
+  "description": "The official directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -59,7 +59,6 @@
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "autoprefixer": "^10.0.1",
-    "docsify-cli": "4.4.4",
     "eslint": "^8",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "18.0.0",

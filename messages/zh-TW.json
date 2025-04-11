@@ -12,7 +12,17 @@
     "explore": "探索",
     "startup": "創業",
     "submit": "提交",
-    "menu": "選單"
+    "menu": "選單",
+    "Movie Info Agent": "電影資訊智能體",
+    "Coder Agent": "程式碼智能體",
+    "LangGraph - Currency Converter": "LangGraph - 貨幣轉換器",
+    "CrewAI - Image Generator": "CrewAI - 圖像生成器",
+    "Google ADK - Expense Reimbursement": "Google ADK - 費用報銷",
+    "This agent uses the TMDB API to answer questions about movies. Part of the Google Genkit sample agents.": "此智能體使用 TMDB API 回答有關電影的問題。屬於 Google Genkit 示例智能體的一部分。",
+    "This is a simple code-writing agent that emits full code files as artifacts. Part of the Google Genkit sample agents.": "這是一個簡單的程式碼編寫智能體，可以輸出完整的程式碼文件作為成果物。屬於 Google Genkit 示例智能體的一部分。",
+    "A currency conversion agent using LangGraph that supports multi-turn conversations to complete currency conversion tasks.": "使用 LangGraph 的貨幣轉換智能體，支持多輪對話來完成貨幣轉換任務。",
+    "A simple image generation agent built with CrewAI that demonstrates how to host an A2A server.": "使用 CrewAI 構建的簡單圖像生成智能體，展示如何託管 A2A 伺服器。",
+    "An expense reimbursement agent built with the Agent Development Kit (ADK) that uses webforms to collect missing information.": "使用代理開發工具包 (ADK) 構建的費用報銷智能體，使用網頁表單收集缺失的資訊。"
   },
   "Footer": {
     "title": "A2A 協議目錄",
@@ -22,7 +32,7 @@
     "termsConditions": "條款和條件",
     "contactUs": "聯繫我們"
   },
-  "FAQs": {
+  "Faq": {
     "title": "常見問題",
     "1": {
       "question": "什麼是A2A協議？",

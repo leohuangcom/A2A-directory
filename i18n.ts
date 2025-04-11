@@ -4,7 +4,7 @@ import { getRequestConfig } from 'next-intl/server';
 export const languages = [
   {
     code: 'en-US',
-    lang: 'en',
+    lang: 'en-US',
     label: 'English',
   },
   {
@@ -19,32 +19,32 @@ export const languages = [
   },
   {
     code: 'ja-JP',
-    lang: 'ja',
+    lang: 'ja-JP',
     label: '日本語',
   },
   {
     code: 'de-DE',
-    lang: 'de',
+    lang: 'de-DE',
     label: 'Deutsch',
   },
   {
     code: 'es-ES',
-    lang: 'es',
+    lang: 'es-ES',
     label: 'Español',
   },
   {
     code: 'fr-FR',
-    lang: 'fr',
+    lang: 'fr-FR',
     label: 'Français',
   },
   {
     code: 'pt-BR',
-    lang: 'pt',
+    lang: 'pt-BR',
     label: 'Português',
   },
   {
     code: 'ru-RU',
-    lang: 'ru',
+    lang: 'ru-RU',
     label: 'Русский',
   },
 ];
@@ -55,7 +55,18 @@ export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  return {
-    messages: (await import(`./messages/${locale}.json`)).default,
-  };
+  try {
+    const messages = (await import(`./messages/${locale}.json`)).default;
+    return { messages };
+  } catch (error) {
+    // 如果找不到完整的语言代码文件，尝试使用基础语言代码
+    const baseLocale = locale.split('-')[0];
+    try {
+      const messages = (await import(`./messages/${baseLocale}.json`)).default;
+      return { messages };
+    } catch (e) {
+      // 如果基础语言文件也不存在，返回 404
+      notFound();
+    }
+  }
 });
