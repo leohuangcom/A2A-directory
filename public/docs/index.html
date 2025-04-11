@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agent2Agent Protocol</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="An open protocol enabling communication and interoperability between opaque agentic applications.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="icon" href="/docs/images/a2a_logo.png" />
+  <!-- index.html -->
+  <style>
+    /* 隐藏右上角的仓库链接 */
+    .github-corner {
+      display: none !important;
+    }
+    /* 隐藏顶部导航栏 */
+    .app-nav {
+      display: none !important;
+    }
+    /* 修复图片无法显示问题 */
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    // 检测URL中的语言路径
+    var urlPath = window.location.pathname || '';
+    var langMatch = urlPath.match(/\/([^\/]+)\/docs/);
+    var lang = (langMatch && langMatch[1]) ? langMatch[1] : 'en';
+    
+    window.$docsify = {
+      loadSidebar: true,
+      loadNavbar: false,  /* 禁用顶部导航栏 */
+      nameLink: '/docs',
+      name: '', /* 移除名称 */
+      repo: '', /* 移除仓库链接 */
+      subMaxLevel: 2,
+      basePath: '/docs/',
+      relativePath: true,
+      auto2top: true,
+      
+      // 简化内容路由配置，避免复杂函数可能导致的错误
+      alias: {
+        // 使用简单字符串路径，确保类型安全
+        '/zh-CN/_sidebar.md': '/zh-CN/_sidebar.md',
+        '/_sidebar.md': '/_sidebar.md',
+        
+        // 语言主页映射
+        '/zh-CN/': '/zh-CN/README.md',
+        '/zh-TW/': '/zh-TW/README.md',
+        '/ja/': '/ja/README.md',
+        '/de/': '/de/README.md',
+        '/es/': '/es/README.md',
+        '/fr/': '/fr/README.md',
+        '/pt/': '/pt/README.md',
+        '/ru/': '/ru/README.md',
+        '/en/': '/en/README.md',
+        '/': '/en/README.md'
+      },
+      
+      // 配置图片路径，确保正确加载
+      routes: {
+        '/images/(.*)': '/docs/images/$1',
+        '/zh-CN/images/(.*)': '/docs/images/$1'
+      }
+    };
+    
+    // 更安全的初始化代码
+    window.addEventListener('DOMContentLoaded', function() {
+      // 仅当URL中含有语言代码且哈希为空时设置默认哈希
+      try {
+        if (lang && !window.location.hash) {
+          setTimeout(function() {
+            window.location.hash = '/' + lang + '/';
+          }, 200);
+        }
+      } catch (e) {
+        console.error('Error setting hash path:', e);
+      }
+    });
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+</body>
+</html>
