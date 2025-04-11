@@ -1,171 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Agent2Agent Protocol</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="An open protocol enabling communication and interoperability between opaque agentic applications.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="icon" href="/docs/images/a2a_logo.png" />
-  <!-- index.html -->
-  <style>
-    /* Hide the repository link in the corner */
-    .github-corner {
-      display: none !important;
-    }
-    /* Hide the top navigation bar */
-    .app-nav {
-      display: none !important;
-    }
-    /* Fix image display issues */
-    img {
-      max-width: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    // Detect language path in URL
-    var urlPath = window.location.pathname || '';
-    var langMatch = urlPath.match(/\/([^\/]+)\/docs/);
-    var lang = (langMatch && langMatch[1]) ? langMatch[1] : 'en';
-    
-    // 直接从window.location.hash获取语言
-    var hashPath = window.location.hash || '';
-    var hashLangMatch = hashPath.match(/#\/([^\/]+)\//);
-    if (hashLangMatch && hashLangMatch[1]) {
-      lang = hashLangMatch[1];
-    }
-    
-    window.$docsify = {
-      loadSidebar: true,
-      loadNavbar: false,  /* Disable top navigation bar */
-      nameLink: '/docs',
-      name: '', /* Remove name */
-      repo: '', /* Remove repository link */
-      subMaxLevel: 2,
-      basePath: '/docs/',
-      relativePath: true,
-      auto2top: true,
-      
-      // 别名配置，为不同语言设置正确的文档路径
-      alias: {
-        // 侧边栏配置
-        '/([^/]+)/_sidebar.md': '/$1/_sidebar.md',
-        '/_sidebar.md': '/_sidebar.md',
-        
-        // 主页配置
-        '/([^/]+)/README.md': '/$1/README.md',
-        '/': '/README.md',
-        
-        // 文档页面映射 - 针对不同语言
-        '/zh-CN/documentation': '/zh-CN/documentation.md',
-        '/zh-CN/documentation.md': '/zh-CN/documentation.md',
-        '/documentation': '/documentation.md',
-        '/documentation.md': '/documentation.md',
-        
-        // 主题文档映射 - 保留语言前缀
-        '/([^/]+)/topics/(.*)': '/$1/topics/$2',
-        '/topics/(.*)': '/topics/$1'
-      },
-      
-      // 综合处理所有文件路径，包括图片和文档
-      plugins: [
-        function(hook) {
-          // 图片路径处理
-          hook.beforeEach(function(content) {
-            // 替换图片路径，确保使用绝对路径
-            return content
-              .replace(/src="images\//g, 'src="/docs/images/')
-              .replace(/src="\.\.\/images\//g, 'src="/docs/images/')
-              .replace(/src="\.\/images\//g, 'src="/docs/images/');
-          });
-          
-          // 修复内部链接
-          hook.beforeEach(function(content) {
-            return content.replace(/\(topics\//g, '(/topics/');
-          });
-          
-          // 添加语言前缀到所有内部链接
-          hook.doneEach(function() {
-            // 在页面加载完成后处理页面上的所有链接
-            setTimeout(function() {
-              var links = document.querySelectorAll('.markdown-section a');
-              links.forEach(function(link) {
-                var href = link.getAttribute('href');
-                if (href && href.startsWith('/topics/')) {
-                  link.setAttribute('href', '#/' + lang + href);
-                  link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.hash = '#/' + lang + href;
-                  });
-                }
-              });
-            }, 100);
-          });
-        }
-      ],
-      
-      // 图片路径映射
-      routes: {
-        '/([^/]+)/images/(.*)': '/docs/images/$2',
-        '/images/(.*)': '/docs/images/$1'
-      },
-
-      // 语言回退
-      fallbackLanguages: ['en']
-    };
-    
-    // 页面加载时确保正确的语言路径
-    window.addEventListener('DOMContentLoaded', function() {
-      try {
-        // 获取当前hash路径
-        var currentHash = window.location.hash || '';
-        
-        // 检查hash是否已包含语言代码
-        var hashLangMatch = currentHash.match(/#\/([^\/]+)\//);
-        var hashLang = hashLangMatch ? hashLangMatch[1] : null;
-        
-        // 特殊处理中文文档路径
-        if (lang === 'zh-CN') {
-          if (currentHash.includes('/documentation') || currentHash === '#/') {
-            // 确保加载中文文档
-            var path = currentHash.includes('/documentation') ? '/documentation' : '/';
-            setTimeout(function() {
-              window.location.hash = '/zh-CN' + path;
-            }, 100);
-            return;
-          }
-        }
-        
-        // 如果hash为空或hash语言与URL语言不匹配，则设置hash
-        if (!currentHash || currentHash === '#/' || hashLang !== lang) {
-          console.log('Setting language path to: ' + lang);
-          // 使用timeout确保在Docsify初始化后运行
-          setTimeout(function() {
-            window.location.hash = '/' + lang + '/';
-          }, 100);
-        }
-      } catch (e) {
-        console.error('Error handling language path:', e);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Agent2Agent Protocol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="description"
+      content="An open protocol enabling communication and interoperability between opaque agentic applications."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+    <link rel="icon" href="/docs/images/a2a_logo.png" />
+    <!-- index.html -->
+    <style>
+      /* Hide the repository link in the corner */
+      .github-corner {
+        display: none !important;
       }
-    });
-    
-    // 全局错误处理
-    window.onerror = function(message, source, lineno, colno, error) {
-      console.log('Caught error:', message);
-      // 防止错误打断页面加载
-      return true;
-    };
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-</body>
+      /* Hide the top navigation bar */
+      .app-nav {
+        display: none !important;
+      }
+      /* Fix image display issues */
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // Detect language path in URL
+      var urlPath = window.location.pathname || '';
+      var langMatch = urlPath.match(/\/([^\/]+)\/docs/);
+      var lang = langMatch && langMatch[1] ? langMatch[1] : 'en';
+
+      // 直接从window.location.hash获取语言
+      var hashPath = window.location.hash || '';
+      var hashLangMatch = hashPath.match(/#\/([^\/]+)\//);
+      if (hashLangMatch && hashLangMatch[1]) {
+        lang = hashLangMatch[1];
+      }
+
+      window.$docsify = {
+        loadSidebar: true,
+        loadNavbar: false /* Disable top navigation bar */,
+        nameLink: '/docs',
+        name: '' /* Remove name */,
+        repo: '' /* Remove repository link */,
+        subMaxLevel: 2,
+        basePath: '/docs/',
+        relativePath: true,
+        auto2top: true,
+
+        // 别名配置，为不同语言设置正确的文档路径
+        alias: {
+          // 侧边栏配置
+          '/([^/]+)/_sidebar.md': '/$1/_sidebar.md',
+          '/_sidebar.md': '/_sidebar.md',
+
+          // 主页配置
+          '/([^/]+)/README.md': '/$1/README.md',
+          '/': '/README.md',
+
+          // 文档页面映射 - 针对不同语言
+          '/zh-CN/documentation': '/zh-CN/documentation.md',
+          '/zh-CN/documentation.md': '/zh-CN/documentation.md',
+          '/documentation': '/documentation.md',
+          '/documentation.md': '/documentation.md',
+
+          // 主题文档映射 - 保留语言前缀
+          '/([^/]+)/topics/(.*)': '/$1/topics/$2',
+          '/topics/(.*)': '/topics/$1',
+        },
+
+        // 综合处理所有文件路径，包括图片和文档
+        plugins: [
+          function (hook) {
+            // 图片路径处理
+            hook.beforeEach(function (content) {
+              // 替换图片路径，确保使用绝对路径
+              return content
+                .replace(/src="images\//g, 'src="/docs/images/')
+                .replace(/src="\.\.\/images\//g, 'src="/docs/images/')
+                .replace(/src="\.\/images\//g, 'src="/docs/images/');
+            });
+
+            // 修复内部链接
+            hook.beforeEach(function (content) {
+              return content.replace(/\(topics\//g, '(/topics/');
+            });
+
+            // 添加语言前缀到所有内部链接
+            hook.doneEach(function () {
+              // 在页面加载完成后处理页面上的所有链接
+              setTimeout(function () {
+                var links = document.querySelectorAll('.markdown-section a');
+                links.forEach(function (link) {
+                  var href = link.getAttribute('href');
+                  if (href && href.startsWith('/topics/')) {
+                    link.setAttribute('href', '#/' + lang + href);
+                    link.addEventListener('click', function (e) {
+                      e.preventDefault();
+                      window.location.hash = '#/' + lang + href;
+                    });
+                  }
+                });
+              }, 100);
+            });
+          },
+        ],
+
+        // 图片路径映射
+        routes: {
+          '/([^/]+)/images/(.*)': '/docs/images/$2',
+          '/images/(.*)': '/docs/images/$1',
+        },
+
+        // 语言回退
+        fallbackLanguages: ['en'],
+      };
+
+      // 页面加载时确保正确的语言路径
+      window.addEventListener('DOMContentLoaded', function () {
+        try {
+          // 获取当前hash路径
+          var currentHash = window.location.hash || '';
+
+          // 检查hash是否已包含语言代码
+          var hashLangMatch = currentHash.match(/#\/([^\/]+)\//);
+          var hashLang = hashLangMatch ? hashLangMatch[1] : null;
+
+          // 特殊处理中文文档路径
+          if (lang === 'zh-CN') {
+            if (currentHash.includes('/documentation') || currentHash === '#/') {
+              // 确保加载中文文档
+              var path = currentHash.includes('/documentation') ? '/documentation' : '/';
+              setTimeout(function () {
+                window.location.hash = '/zh-CN' + path;
+              }, 100);
+              return;
+            }
+          }
+
+          // 如果hash为空或hash语言与URL语言不匹配，则设置hash
+          if (!currentHash || currentHash === '#/' || hashLang !== lang) {
+            console.log('Setting language path to: ' + lang);
+            // 使用timeout确保在Docsify初始化后运行
+            setTimeout(function () {
+              window.location.hash = '/' + lang + '/';
+            }, 100);
+          }
+        } catch (e) {
+          console.error('Error handling language path:', e);
+        }
+      });
+
+      // 全局错误处理
+      window.onerror = function (message, source, lineno, colno, error) {
+        console.log('Caught error:', message);
+        // 防止错误打断页面加载
+        return true;
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  </body>
 </html>

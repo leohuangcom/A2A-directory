@@ -41,11 +41,15 @@ An open protocol enabling Agent-to-Agent interoperability, bridging the gap betw
 
 ## Feedback and Changes
 
-A2A is a work in progress and is expected to change based on community feedback. This repo contains the initial specification, documentation, and [sample code](https://github.com/google/A2A/tree/main/samples). We will continue to update this repo with more features, more examples, specs, and libraries as they become available. When the spec and samples can graduate to a production quality SDK, we will declare version 1.0 and maintain stable releases.
+A2A is a work in progress and is expected to change based on community feedback. This repo contains the initial
+specification, documentation, and [sample code](https://github.com/google/A2A/tree/main/samples). We will continue to
+update this repo with more features, more examples, specs, and libraries as they become available. When the spec and
+samples can graduate to a production quality SDK, we will declare version 1.0 and maintain stable releases.
 
 ## Key Principles
 
-Using A2A, agents accomplish tasks for end-users without sharing memory, thoughts, or tools. Instead the agents exchange context, status, instructions, and data in their native modalities.
+Using A2A, agents accomplish tasks for end-users without sharing memory, thoughts, or tools. Instead the agents exchange
+context, status, instructions, and data in their native modalities.
 
 - **Simple**: Reuse existing standards
 - **Enterprise Ready**: Auth, Security, Privacy, Tracing, Monitoring
@@ -75,33 +79,54 @@ The A2A protocol has three actors:
 
 ### Transport
 
-The protocol leverages HTTP for transport between the client and the remote agent. Depending on the capabilities of the client and the remote agent, they may leverage SSE for supporting streaming for receiving updates from the server.
+The protocol leverages HTTP for transport between the client and the remote agent. Depending on the capabilities of the
+client and the remote agent, they may leverage SSE for supporting streaming for receiving updates from the server.
 
-A2A leverages [JSON-RPC 2.0](https://www.jsonrpc.org/specification) as the data exchange format for communication between a Client and a Remote Agent.
+A2A leverages [JSON-RPC 2.0](https://www.jsonrpc.org/specification) as the data exchange format for communication
+between a Client and a Remote Agent.
 
 ### Async
 
-A2A clients and servers can use standard request/response patterns and poll for updates. However, A2A also supports streaming updates through SSE (while connected) and receiving [push notifications](/topics/push_notifications.md?id=remote-agent-to-client-updates) while disconnected.
+A2A clients and servers can use standard request/response patterns and poll for updates. However, A2A also supports
+streaming updates through SSE (while connected) and receiving
+[push notifications](/topics/push_notifications.md?id=remote-agent-to-client-updates) while disconnected.
 
 ### Authentication and Authorization
 
-A2A models agents as enterprise applications (and can do so because A2A agents are opaque and do not share tools and resources). This quickly brings enterprise-readiness to agentic interop.
+A2A models agents as enterprise applications (and can do so because A2A agents are opaque and do not share tools and
+resources). This quickly brings enterprise-readiness to agentic interop.
 
-A2A follows [Open API’s Authentication specification](https://swagger.io/docs/specification/v3_0/authentication/) for authentication. Importantly, A2A agents do not exchange identity information within the A2A protocol. Instead, they obtain materials (such as tokens) out of band and transmit materials in HTTP headers and not in A2A payloads.
+A2A follows [Open API’s Authentication specification](https://swagger.io/docs/specification/v3_0/authentication/) for
+authentication. Importantly, A2A agents do not exchange identity information within the A2A protocol. Instead, they
+obtain materials (such as tokens) out of band and transmit materials in HTTP headers and not in A2A payloads.
 
-While A2A does not transmit identity in-band, servers do send authentication requirements in A2A payloads. At minimum, servers are expected to publish its requirements in its [Agent Card](#agent-card). Thoughts about discovering agent cards is in [this topic](topics/agent_discovery.md?id=discovering-agent-cards).
+While A2A does not transmit identity in-band, servers do send authentication requirements in A2A payloads. At minimum,
+servers are expected to publish its requirements in its [Agent Card](#agent-card). Thoughts about discovering agent
+cards is in [this topic](topics/agent_discovery.md?id=discovering-agent-cards).
 
-Clients should use one of the servers published authentication protocols to authenticate their identity and obtain credential material. A2A servers should authenticate **every** request and reject or challenge requests with standard HTTP response codes (401, 403), and authentication-protocol-specific headers and bodies (such as a HTTP 401 response with a [WWW-Authenticate](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) header indicating the required authentication schema, or OIDC discovery document at a well-known path). More details discussed in [Enterprise Ready](topics/enterprise_ready.md).
+Clients should use one of the servers published authentication protocols to authenticate their identity and obtain
+credential material. A2A servers should authenticate **every** request and reject or challenge requests with standard
+HTTP response codes (401, 403), and authentication-protocol-specific headers and bodies (such as a HTTP 401 response
+with a [WWW-Authenticate](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) header indicating
+the required authentication schema, or OIDC discovery document at a well-known path). More details discussed in
+[Enterprise Ready](topics/enterprise_ready.md).
 
-> Note: If an agent requires that the client/user provide additional credentials during execution of a task (for example, to use a specific tool), the agent should return a task status of `Input-Required` with the payload being an Authentication structure. The client should, again, obtain credential material out of band to A2A.
+> Note: If an agent requires that the client/user provide additional credentials during execution of a task (for
+> example, to use a specific tool), the agent should return a task status of `Input-Required` with the payload being an
+> Authentication structure. The client should, again, obtain credential material out of band to A2A.
 
 ## Agent Card
 
-Remote Agents that support A2A are required to publish an **Agent Card** in JSON format describing the agent’s capabilities/skills and authentication mechanism. Clients use the Agent Card information to identify the best agent that can perform a task and leverage A2A to communicate with that remote agent.
+Remote Agents that support A2A are required to publish an **Agent Card** in JSON format describing the agent’s
+capabilities/skills and authentication mechanism. Clients use the Agent Card information to identify the best agent that
+can perform a task and leverage A2A to communicate with that remote agent.
 
 ### Discovery
 
-We recommend host their Agent Card at https://`base url`/.well-known/agent.json. This is compatible with a DNS approach where the client finds the server IP via DNS and sends an HTTP GET to retrieve the agent card. We also anticipate that systems will maintain private registries (e.g. an ‘Agent Catalog’ or private marketplace, etc). More discussion can be found in [this document](topics/agent_discovery.md?id=discovering-agent-cards).
+We recommend host their Agent Card at https://`base url`/.well-known/agent.json. This is compatible with a DNS approach
+where the client finds the server IP via DNS and sends an HTTP GET to retrieve the agent card. We also anticipate that
+systems will maintain private registries (e.g. an ‘Agent Catalog’ or private marketplace, etc). More discussion can be
+found in [this document](topics/agent_discovery.md?id=discovering-agent-cards).
 
 ### Representation
 
@@ -172,17 +197,24 @@ interface AgentCard {
 
 ## Agent-to-Agent Communication
 
-The communication between a Client and a Remote Agent is oriented towards **_task completion_** where agents collaboratively fulfill an end-user’s request. A Task object allows a Client and a Remote Agent to collaborate for completing the submitted task.
+The communication between a Client and a Remote Agent is oriented towards **_task completion_** where agents
+collaboratively fulfill an end-user’s request. A Task object allows a Client and a Remote Agent to collaborate for
+completing the submitted task.
 
-A task can be completed by a remote agent immediately or it can be long-running. For long-running tasks, the client may poll the agent for fetching the latest status. Agents can also push notifications to the client via SSE (if connected) or through an external notification service.
+A task can be completed by a remote agent immediately or it can be long-running. For long-running tasks, the client may
+poll the agent for fetching the latest status. Agents can also push notifications to the client via SSE (if connected)
+or through an external notification service.
 
 ## Core Objects
 
 ### Task
 
-A Task is a stateful entity that allows Clients and Remote Agents to achieve a specific outcome and generate results. Clients and Remote Agents exchange Messages within a Task. Remote Agents generate results as Artifacts.
+A Task is a stateful entity that allows Clients and Remote Agents to achieve a specific outcome and generate results.
+Clients and Remote Agents exchange Messages within a Task. Remote Agents generate results as Artifacts.
 
-A Task is always created by a Client and the status is always determined by the Remote Agent. Multiple Tasks may be part of a common session (denoted by optional sessionId) if required by the client. To do so, the Client sets an optional sessionId when creating the Task.
+A Task is always created by a Client and the status is always determined by the Remote Agent. Multiple Tasks may be part
+of a common session (denoted by optional sessionId) if required by the client. To do so, the Client sets an optional
+sessionId when creating the Task.
 
 The agent may:
 
@@ -193,9 +225,11 @@ The agent may:
 - ask the client for more information
 - delegate to other agents and systems
 
-Even after fulfilling the goal, the client can request more information or a change in the context of that same Task. (For example client: "draw a picture of a rabbit", agent: "&lt;picture&gt;", client: "make it red").
+Even after fulfilling the goal, the client can request more information or a change in the context of that same Task.
+(For example client: "draw a picture of a rabbit", agent: "&lt;picture&gt;", client: "make it red").
 
-Tasks are used to transmit [Artifacts](#artifact) (results) and [Messages](#message) (thoughts, instructions, anything else). Tasks maintain a status and an optional history of status and Messages.
+Tasks are used to transmit [Artifacts](#artifact) (results) and [Messages](#message) (thoughts, instructions, anything
+else). Tasks maintain a status and an optional history of status and Messages.
 
 ```typescript
 interface Task {
@@ -235,21 +269,16 @@ interface TaskSendParams {
   pushNotification?: PushNotificationConfig;
   metadata?: Record<string, any>; // extension metadata
 }
-type TaskState =
-  | "submitted"
-  | "working"
-  | "input-required"
-  | "completed"
-  | "canceled"
-  | "failed"
-  | "unknown";
+type TaskState = 'submitted' | 'working' | 'input-required' | 'completed' | 'canceled' | 'failed' | 'unknown';
 ```
 
 ### Artifact
 
-Agents generate Artifacts as an end result of a Task. Artifacts are immutable, can be named, and can have multiple parts. A streaming response can append parts to existing Artifacts.
+Agents generate Artifacts as an end result of a Task. Artifacts are immutable, can be named, and can have multiple
+parts. A streaming response can append parts to existing Artifacts.
 
-A single Task can generate many Artifacts. For example, "create a webpage" could create separate HTML and image Artifacts.
+A single Task can generate many Artifacts. For example, "create a webpage" could create separate HTML and image
+Artifacts.
 
 ```typescript
 interface Artifact {
@@ -265,15 +294,18 @@ interface Artifact {
 
 ### Message
 
-A Message contains any content that is not an Artifact. This can include things like agent thoughts, user context, instructions, errors, status, or metadata.
+A Message contains any content that is not an Artifact. This can include things like agent thoughts, user context,
+instructions, errors, status, or metadata.
 
-All content from a client comes in the form of a Message. Agents send Messages to communicate status or to provide instructions (whereas generated results are sent as Artifacts).
+All content from a client comes in the form of a Message. Agents send Messages to communicate status or to provide
+instructions (whereas generated results are sent as Artifacts).
 
-A Message can have multiple parts to denote different pieces of content. For example, a user request could include a textual description from a user and then multiple files used as context from the client.
+A Message can have multiple parts to denote different pieces of content. For example, a user request could include a
+textual description from a user and then multiple files used as context from the client.
 
 ```typescript
 interface Message {
-  role: "user" | "agent";
+  role: 'user' | 'agent';
   parts: Part[];
   metadata?: Record<string, any>;
 }
@@ -281,15 +313,16 @@ interface Message {
 
 ### Part
 
-A fully formed piece of content exchanged between a client and a remote agent as part of a Message or an Artifact. Each Part has its own content type and metadata.
+A fully formed piece of content exchanged between a client and a remote agent as part of a Message or an Artifact. Each
+Part has its own content type and metadata.
 
 ```typescript
 interface TextPart {
-  type: "text";
+  type: 'text';
   text: string;
 }
 interface FilePart {
-  type: "file";
+  type: 'file';
   file: {
     name?: string;
     mimeType?: string;
@@ -300,7 +333,7 @@ interface FilePart {
   };
 }
 interface DataPart {
-  type: "data";
+  type: 'data';
   data: Record<string, any>;
 }
 type Part = (TextPart | FilePart | DataPart) & {
@@ -310,11 +343,21 @@ type Part = (TextPart | FilePart | DataPart) & {
 
 ### Push Notifications
 
-A2A supports a secure notification mechanism whereby an agent can notify a client of an update outside of a connected session via a PushNotificationService. Within and across enterprises, it is critical that the agent verifies the identity of the notification service, authenticates itself with the service, and presents an identifier that ties the notification to the executing Task.
+A2A supports a secure notification mechanism whereby an agent can notify a client of an update outside of a connected
+session via a PushNotificationService. Within and across enterprises, it is critical that the agent verifies the
+identity of the notification service, authenticates itself with the service, and presents an identifier that ties the
+notification to the executing Task.
 
-The target server of the PushNotificationService should be considered a separate service, and is not guaranteed (or even expected) to be the client directly. This PushNotificationService is responsible for authenticating and authorizing the agent and for proxying the verified notification to the appropriate endpoint (which could be anything from a pub/sub queue, to an email inbox or other service, etc).
+The target server of the PushNotificationService should be considered a separate service, and is not guaranteed (or even
+expected) to be the client directly. This PushNotificationService is responsible for authenticating and authorizing the
+agent and for proxying the verified notification to the appropriate endpoint (which could be anything from a pub/sub
+queue, to an email inbox or other service, etc).
 
-For contrived scenarios with isolated client-agent pairs (e.g. local service mesh in a contained VPC, etc.) or isolated environments without enterprise security concerns, the client may choose to simply open a port and act as its own PushNotificationService. Any enterprise implementation will likely have a centralized service that authenticates the remote agents with trusted notification credentials and can handle online/offline scenarios. (This should be thought of similarly to a mobile Push Notification Service).
+For contrived scenarios with isolated client-agent pairs (e.g. local service mesh in a contained VPC, etc.) or isolated
+environments without enterprise security concerns, the client may choose to simply open a port and act as its own
+PushNotificationService. Any enterprise implementation will likely have a centralized service that authenticates the
+remote agents with trusted notification credentials and can handle online/offline scenarios. (This should be thought of
+similarly to a mobile Push Notification Service).
 
 ```typescript
 interface PushNotificationConfig {
@@ -386,7 +429,8 @@ interface TaskPushNotificationConfig {
 
 ## Send a Task
 
-Allows a client to send content to a remote agent to start a new Task, resume an interrupted Task or reopen a completed Task. A Task interrupt may be caused due to an agent requiring additional user input or a runtime error.
+Allows a client to send content to a remote agent to start a new Task, resume an interrupted Task or reopen a completed
+Task. A Task interrupt may be caused due to an agent requiring additional user input or a runtime error.
 
 ```json
 //Request
@@ -430,9 +474,12 @@ Allows a client to send content to a remote agent to start a new Task, resume an
 
 ## Get a Task
 
-Clients may use this method to retrieve the generated Artifacts for a Task. The agent determines the retention window for Tasks previously submitted to it. An agent may return an error code for Tasks that were past the retention window for an agent or for Tasks that are short-lived and not persisted by the agent.
+Clients may use this method to retrieve the generated Artifacts for a Task. The agent determines the retention window
+for Tasks previously submitted to it. An agent may return an error code for Tasks that were past the retention window
+for an agent or for Tasks that are short-lived and not persisted by the agent.
 
-The client may also request the last N items of history of the Task which will include all Messages, in order, sent by client and server. By default this is 0 (no history).
+The client may also request the last N items of history of the Task which will include all Messages, in order, sent by
+client and server. By default this is 0 (no history).
 
 ```json
 //Request
@@ -576,9 +623,13 @@ Clients may retrieve the currently configured push notification configuration fo
 
 ## Multi-turn Conversations
 
-A Task may pause to be executed on the remote agent if they require additional user input. When a Task is in `input-required` state, the client is required to provide additional input for the Task to resume processing on the remote agent.
+A Task may pause to be executed on the remote agent if they require additional user input. When a Task is in
+`input-required` state, the client is required to provide additional input for the Task to resume processing on the
+remote agent.
 
-The Message included in the `input-required` state must include the details indicating what the client must do. For example "fill out a form" or "log into SaaS service foo". If this includes structured data, the instruction should be sent as one `Part` and the structured data as a second `Part`.
+The Message included in the `input-required` state must include the details indicating what the client must do. For
+example "fill out a form" or "log into SaaS service foo". If this includes structured data, the instruction should be
+sent as one `Part` and the structured data as a second `Part`.
 
 ```json
 //Request - seq 1
@@ -660,10 +711,12 @@ The Message included in the `input-required` state must include the details indi
 
 ## Streaming Support
 
-For clients and remote agents capable of communicating over HTTP with SSE, clients can send the RPC request with method `tasks/sendSubscribe` when creating a new Task. The remote agent can respond with a stream of TaskStatusUpdateEvents (to communicate status changes or instructions/requests) and TaskArtifactUpdateEvents (to stream generated results).
-Note that TaskArtifactUpdateEvents can append new parts to existing Artifacts. Clients
-can use `task/get` to retrieve the entire Artifact outside of the streaming.
-Agents must set final: true attribute at the end of the stream or if the agent is interrupted and require additional user input.
+For clients and remote agents capable of communicating over HTTP with SSE, clients can send the RPC request with method
+`tasks/sendSubscribe` when creating a new Task. The remote agent can respond with a stream of TaskStatusUpdateEvents (to
+communicate status changes or instructions/requests) and TaskArtifactUpdateEvents (to stream generated results). Note
+that TaskArtifactUpdateEvents can append new parts to existing Artifacts. Clients can use `task/get` to retrieve the
+entire Artifact outside of the streaming. Agents must set final: true attribute at the end of the stream or if the agent
+is interrupted and require additional user input.
 
 ```json
 //Request
@@ -707,13 +760,13 @@ data: {
   "jsonrpc": "2.0",
   "id": 1,
   "result": {
-    "id": 1,    
+    "id": 1,
     "artifact": [
       "parts": [
         {"type":"text", "text": "<section 1...>"}
       ],
       "index": 0,
-      "append": false,      
+      "append": false,
       "lastChunk": false
     ]
   }
@@ -722,13 +775,13 @@ data: {
   "jsonrpc": "2.0",
   "id": 1,
   "result": {
-    "id": 1,  
+    "id": 1,
     "artifact": [
       "parts": [
         {"type":"text", "text": "<section 2...>"}
       ],
       "index": 0,
-      "append": true,      
+      "append": true,
       "lastChunk": false
     ]
   }
@@ -737,7 +790,7 @@ data: {
   "jsonrpc": "2.0",
   "id": 1,
   "result": {
-    "id": 1,    
+    "id": 1,
     "artifact": [
       "parts": [
         {"type":"text", "text": "<section 3...>"}
@@ -804,7 +857,7 @@ data: {
       "index": 0,
       "append": true,
       "lastChunk": true
-    ]   
+    ]
   }
 }
 
@@ -965,7 +1018,8 @@ Both the client or the agent can request structured output from the other party.
 
 ## Error Handling
 
-Following is the ErrorMessage format for the server to respond to the client when it encounters an error processing the client request.
+Following is the ErrorMessage format for the server to respond to the client when it encounters an error processing the
+client request.
 
 ```typescript
 interface ErrorMessage {
@@ -977,16 +1031,16 @@ interface ErrorMessage {
 
 The following are the standard JSON-RPC error codes that the server can respond with for error scenarios:
 
-| Error Code         | Message          | Description                                      |
-| :----------------- | :--------------- | :----------------------------------------------- |
-| \-32700            | JSON parse error | Invalid JSON was sent                            |
-| \-32600            | Invalid Request  | Request payload validation error                 |
-| \-32601            | Method not found | Not a valid method                               |
-| \-32602            | Invalid params   | Invalid method parameters                        |
-| \-32603            | Internal error   | Internal JSON-RPC error                          |
-| \-32000 to \-32099 | Server error     | Reserved for implementation specific error codes |
-| \-32001            | Task not found   | Task not found with the provided id              |
-| \-32002            | Task cannot be canceled  | Task cannot be canceled by the remote agent|
-| \-32003            | Push notifications not supported | Push Notification is not supported by the agent|
-| \-32004            | Unsupported operation   | Operation is not supported                        |
-| \-32005            | Incompatible content types   | Incompatible content types between client and an agent  |
+| Error Code         | Message                          | Description                                            |
+| :----------------- | :------------------------------- | :----------------------------------------------------- |
+| \-32700            | JSON parse error                 | Invalid JSON was sent                                  |
+| \-32600            | Invalid Request                  | Request payload validation error                       |
+| \-32601            | Method not found                 | Not a valid method                                     |
+| \-32602            | Invalid params                   | Invalid method parameters                              |
+| \-32603            | Internal error                   | Internal JSON-RPC error                                |
+| \-32000 to \-32099 | Server error                     | Reserved for implementation specific error codes       |
+| \-32001            | Task not found                   | Task not found with the provided id                    |
+| \-32002            | Task cannot be canceled          | Task cannot be canceled by the remote agent            |
+| \-32003            | Push notifications not supported | Push Notification is not supported by the agent        |
+| \-32004            | Unsupported operation            | Operation is not supported                             |
+| \-32005            | Incompatible content types       | Incompatible content types between client and an agent |

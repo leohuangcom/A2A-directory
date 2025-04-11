@@ -3,6 +3,7 @@
 **Resumo:** O A2A foi projetado para casos de uso empresariais.
 
 <!-- TOC -->
+
 - [Pronto para Empresa](#pronto-para-empresa)
   - [Requisitos Principais](#requisitos-principais)
   - [Autenticação e Autorização](#autenticação-e-autorização)
@@ -15,11 +16,13 @@
 O A2A suporta os seguintes requisitos principais necessários em ambientes empresariais:
 
 1. **Autenticação e Autorização**
+
    - Autenticação em várias camadas entre agentes e clientes
    - Integração com provedores de identidade empresariais
    - Controle de acesso baseado em funções
 
 2. **Monitoramento e Rastreamento**
+
    - Logs detalhados de execução de tarefas
    - Métricas de desempenho
    - Rastreamento e diagnóstico de erros
@@ -34,10 +37,12 @@ O A2A suporta os seguintes requisitos principais necessários em ambientes empre
 O A2A suporta uma abordagem de autenticação em várias camadas entre agentes e clientes:
 
 1. **Autenticação na Camada de Transporte**
+
    - Proteção de comunicação com mTLS
    - Autenticação baseada em certificados
 
 2. **Autenticação na Camada de Aplicação**
+
    - OAuth 2.0 / OpenID Connect
    - Chaves de API
    - Esquemas de autenticação personalizados
@@ -51,11 +56,13 @@ O A2A suporta uma abordagem de autenticação em várias camadas entre agentes e
 O A2A fornece as seguintes considerações de segurança para implantações empresariais:
 
 1. **Proteção de Dados**
+
    - Criptografia de dados em trânsito
    - Criptografia de dados em repouso
    - Proteção de informações confidenciais
 
 2. **Controle de Acesso**
+
    - Gerenciamento granular de permissões
    - Controle de acesso baseado em recursos
    - Logs de auditoria
@@ -63,4 +70,4 @@ O A2A fornece as seguintes considerações de segurança para implantações emp
 3. **Conformidade**
    - Adesão a requisitos regulatórios
    - Implementação de padrões de segurança
-   - Avaliações regulares de segurança 
+   - Avaliações regulares de segurança

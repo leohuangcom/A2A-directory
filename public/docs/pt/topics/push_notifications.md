@@ -3,6 +3,7 @@
 **Resumo:** O A2A permite notificações push entre agentes remotos e clientes.
 
 <!-- TOC -->
+
 - [Notificações Push](#notificações-push)
   - [Fluxo de Trabalho Básico](#fluxo-de-trabalho-básico)
   - [Configuração](#configuração)
@@ -14,7 +15,8 @@
 
 ## Fluxo de Trabalho Básico
 
-As notificações push permitem que os agentes notifiquem os clientes sobre atualizações quando a conexão entre eles é interrompida. O fluxo de trabalho básico é o seguinte:
+As notificações push permitem que os agentes notifiquem os clientes sobre atualizações quando a conexão entre eles é
+interrompida. O fluxo de trabalho básico é o seguinte:
 
 1. O cliente envia uma tarefa para o agente
 2. O agente recebe a tarefa e inicia o processamento
@@ -27,6 +29,7 @@ As notificações push permitem que os agentes notifiquem os clientes sobre atua
 Para habilitar notificações push, a seguinte configuração é necessária:
 
 1. **Lado do Agente**
+
    - Configuração do serviço de notificações push
    - Exposição do endpoint de notificação
    - Gerenciamento de credenciais
@@ -41,11 +44,13 @@ Para habilitar notificações push, a seguinte configuração é necessária:
 As seguintes regras se aplicam à implementação de notificações push:
 
 1. **Formato da Notificação**
+
    - Conformidade com o formato JSON-RPC 2.0
    - Inclusão de metadados necessários
    - Payload criptografado
 
 2. **Garantia de Entrega**
+
    - Garantia de entrega pelo menos uma vez
    - Tratamento de notificações duplicadas
    - Tentativas em caso de erro
@@ -76,11 +81,13 @@ As notificações push usam o seguinte evento JSON-RPC:
 A validação de notificações push requer as seguintes etapas:
 
 1. **Validação do Remetente**
+
    - Verificação de assinatura digital
    - Autenticação da origem
    - Validação de timestamp
 
 2. **Validação de Conteúdo**
+
    - Verificação de integridade do payload
    - Validação de esquema
    - Aplicação de regras de negócio
@@ -88,4 +95,4 @@ A validação de notificações push requer as seguintes etapas:
 3. **Confirmação de Entrega**
    - Envio de confirmação de recebimento
    - Tratamento de erros
-   - Registro de logs 
+   - Registro de logs

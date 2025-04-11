@@ -12,11 +12,9 @@ export default function WebNavCard({
   content,
 }: Omit<WebNavigationListRow, 'url' | 'id' | 'imageUrl'>) {
   const t = useTranslations('Navigation');
-  
-  // 尝试获取翻译，如果没有则使用原始文本
   const translatedTitle = t(title, { fallback: title });
   const translatedContent = t(content, { fallback: content });
-  
+
   return (
     <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
       <Link href={`/agents/${name}`} title={translatedTitle} className='hover:opacity-70'>

@@ -1,10 +1,12 @@
 # A2A Directory
 
-A comprehensive directory for the Agent2Agent (A2A) Protocol - an open framework for agent interoperability developed by Google Cloud with support from over 50 technology partners.
+A comprehensive directory for the Agent2Agent (A2A) Protocol - an open framework for agent interoperability developed by
+Google Cloud with support from over 50 technology partners.
 
 ## About A2A Protocol
 
 The A2A protocol facilitates seamless communication between AI agents, enabling them to:
+
 - Securely exchange information
 - Coordinate actions across enterprise platforms
 - Collaborate in multi-agent ecosystems
@@ -40,7 +42,8 @@ pnpm dev
 
 ## Contribute
 
-We welcome contributions to expand and improve the A2A Protocol Directory. Please see our contributing guidelines for more information.
+We welcome contributions to expand and improve the A2A Protocol Directory. Please see our contributing guidelines for
+more information.
 
 ## License
 

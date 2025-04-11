@@ -44,7 +44,7 @@ const nextConfig = {
       {
         source: '/:locale/docs/:path*',
         destination: '/docs/:path*',
-      }
+      },
     ];
   },
 };

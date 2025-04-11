@@ -3,6 +3,7 @@
 **Zusammenfassung:** A2A ermöglicht Push-Benachrichtigungen zwischen entfernten Agenten und Clients.
 
 <!-- TOC -->
+
 - [Push-Benachrichtigungen](#push-benachrichtigungen)
   - [Grundlegender Workflow](#grundlegender-workflow)
   - [Konfiguration](#konfiguration)
@@ -14,7 +15,8 @@
 
 ## Grundlegender Workflow
 
-Push-Benachrichtigungen ermöglichen es Agenten, Clients über Aktualisierungen zu informieren, wenn die Verbindung zwischen ihnen unterbrochen wird. Der grundlegende Workflow sieht wie folgt aus:
+Push-Benachrichtigungen ermöglichen es Agenten, Clients über Aktualisierungen zu informieren, wenn die Verbindung
+zwischen ihnen unterbrochen wird. Der grundlegende Workflow sieht wie folgt aus:
 
 1. Der Client sendet eine Aufgabe an den Agenten
 2. Der Agent empfängt die Aufgabe und beginnt mit der Verarbeitung
@@ -27,6 +29,7 @@ Push-Benachrichtigungen ermöglichen es Agenten, Clients über Aktualisierungen 
 Zur Aktivierung von Push-Benachrichtigungen ist folgende Konfiguration erforderlich:
 
 1. **Agentenseite**
+
    - Konfiguration des Push-Benachrichtigungsdienstes
    - Bereitstellung des Benachrichtigungsendpunkts
    - Verwaltung von Anmeldeinformationen
@@ -41,11 +44,13 @@ Zur Aktivierung von Push-Benachrichtigungen ist folgende Konfiguration erforderl
 Für die Implementierung von Push-Benachrichtigungen gelten folgende Regeln:
 
 1. **Benachrichtigungsformat**
+
    - Konformität mit dem JSON-RPC 2.0-Format
    - Einbeziehung erforderlicher Metadaten
    - Verschlüsselter Payload
 
 2. **Zustellungsgarantie**
+
    - Mindestens einmalige Zustellungsgarantie
    - Behandlung doppelter Benachrichtigungen
    - Wiederholungsversuche bei Fehlern
@@ -76,11 +81,13 @@ Push-Benachrichtigungen verwenden das folgende JSON-RPC-Ereignis:
 Die Validierung von Push-Benachrichtigungen erfordert folgende Schritte:
 
 1. **Absendervalidierung**
+
    - Überprüfung der digitalen Signatur
    - Authentifizierung der Quelle
    - Zeitstempelvalidierung
 
 2. **Inhaltsvalidierung**
+
    - Integritätsprüfung des Payloads
    - Schema-Validierung
    - Anwendung von Geschäftsregeln
@@ -88,4 +95,4 @@ Die Validierung von Push-Benachrichtigungen erfordert folgende Schritte:
 3. **Zustellungsbestätigung**
    - Senden von Empfangsbestätigungen
    - Fehlerbehandlung
-   - Protokollierung 
+   - Protokollierung

@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { Metadata } from 'next';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { Toaster } from '@/components/ui/sonner';
 import Navigation from '@/components/home/Navigation';
@@ -53,7 +53,8 @@ export default function RootLayout({ children, params: { locale } }: RootLayoutP
 
 export const metadata: Metadata = {
   title: 'A2A Directory',
-  description: 'The official directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability',
+  description:
+    'The official directory and guide for the Agent2Agent (A2A) protocol - an open framework for agent interoperability',
   icons: {
     icon: [
       {
