@@ -27,6 +27,26 @@ const nextConfig = {
     ],
   },
   productionBrowserSourceMaps: false,
+  async rewrites() {
+    return [
+      {
+        source: '/docs',
+        destination: '/docs/index.html',
+      },
+      {
+        source: '/:locale/docs',
+        destination: '/docs/index.html',
+      },
+      {
+        source: '/docs/:path*',
+        destination: '/docs/:path*',
+      },
+      {
+        source: '/:locale/docs/:path*',
+        destination: '/docs/:path*',
+      }
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

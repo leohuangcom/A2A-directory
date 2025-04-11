@@ -1,0 +1,20 @@
+<!-- docs/_sidebar.md -->
+
+* [Главная](/)
+* [Блог-пост](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
+* [Техническая документация](/documentation.md)
+* Ключевые темы
+  * [A2A и MCP](/topics/a2a_and_mcp.md)
+  * [Обнаружение агентов](/topics/agent_discovery.md)
+  * [Готовность для предприятий](/topics/enterprise_ready.md)
+  * [Push-уведомления](/topics/push_notifications.md)
+* [Json-спецификация](https://github.com/google/A2A/tree/main/specification/json)
+* [Примеры A2A в действии](https://github.com/google/A2A/tree/main/samples)
+  * [Пример клиента/сервера A2A](https://github.com/google/A2A/tree/main/samples/python/common)
+  * [Мульти-агентное веб-приложение](https://github.com/google/A2A/tree/main/demo/README.md)
+  * [Интерфейс командной строки](https://github.com/google/A2A/blob/main/samples/python/hosts/cli/README.md)
+* [Примеры агентов](https://github.com/google/A2A/tree/main/samples)
+  * [Google Agent Developer Kit (ADK)](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk/README.md)
+  * [CrewAI](https://github.com/google/A2A/tree/main/samples/python/agents/crewai/README.md)
+  * [LangGraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph/README.md)
+  * [Genkit](https://github.com/google/A2A/tree/main/samples/js/src/agents/README.md) 

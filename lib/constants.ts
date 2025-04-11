@@ -23,6 +23,10 @@ export const NAV_LINKS = [
     code: 'explore',
     href: '/explore',
   },
+  {
+    code: 'documentation',
+    href: '/docs',
+  },
   // 临时隐藏Submit入口
   // {
   //   code: 'submit',

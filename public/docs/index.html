@@ -10,15 +10,15 @@
   <link rel="icon" href="/docs/images/a2a_logo.png" />
   <!-- index.html -->
   <style>
-    /* 隐藏右上角的仓库链接 */
+    /* Hide the repository link in the corner */
     .github-corner {
       display: none !important;
     }
-    /* 隐藏顶部导航栏 */
+    /* Hide the top navigation bar */
     .app-nav {
       display: none !important;
     }
-    /* 修复图片无法显示问题 */
+    /* Fix image display issues */
     img {
       max-width: 100%;
     }
@@ -27,29 +27,36 @@
 <body>
   <div id="app"></div>
   <script>
-    // 检测URL中的语言路径
+    // Detect language path in URL
     var urlPath = window.location.pathname || '';
     var langMatch = urlPath.match(/\/([^\/]+)\/docs/);
     var lang = (langMatch && langMatch[1]) ? langMatch[1] : 'en';
     
     window.$docsify = {
       loadSidebar: true,
-      loadNavbar: false,  /* 禁用顶部导航栏 */
+      loadNavbar: false,  /* Disable top navigation bar */
       nameLink: '/docs',
-      name: '', /* 移除名称 */
-      repo: '', /* 移除仓库链接 */
+      name: '', /* Remove name */
+      repo: '', /* Remove repository link */
       subMaxLevel: 2,
       basePath: '/docs/',
       relativePath: true,
       auto2top: true,
       
-      // 简化内容路由配置，避免复杂函数可能导致的错误
+      // Simplified content routing configuration to avoid errors
       alias: {
-        // 使用简单字符串路径，确保类型安全
+        // Use simple string paths for type safety
         '/zh-CN/_sidebar.md': '/zh-CN/_sidebar.md',
+        '/zh-TW/_sidebar.md': '/zh-TW/_sidebar.md',
+        '/ja/_sidebar.md': '/ja/_sidebar.md',
+        '/de/_sidebar.md': '/de/_sidebar.md',
+        '/es/_sidebar.md': '/es/_sidebar.md',
+        '/fr/_sidebar.md': '/fr/_sidebar.md',
+        '/pt/_sidebar.md': '/pt/_sidebar.md',
+        '/ru/_sidebar.md': '/ru/_sidebar.md',
         '/_sidebar.md': '/_sidebar.md',
         
-        // 语言主页映射
+        // Language homepage mappings
         '/zh-CN/': '/zh-CN/README.md',
         '/zh-TW/': '/zh-TW/README.md',
         '/ja/': '/ja/README.md',
@@ -62,16 +69,24 @@
         '/': '/en/README.md'
       },
       
-      // 配置图片路径，确保正确加载
+      // Configure image paths for all languages
       routes: {
         '/images/(.*)': '/docs/images/$1',
-        '/zh-CN/images/(.*)': '/docs/images/$1'
+        '/zh-CN/images/(.*)': '/docs/images/$1',
+        '/zh-TW/images/(.*)': '/docs/images/$1',
+        '/ja/images/(.*)': '/docs/images/$1',
+        '/de/images/(.*)': '/docs/images/$1',
+        '/es/images/(.*)': '/docs/images/$1',
+        '/fr/images/(.*)': '/docs/images/$1',
+        '/pt/images/(.*)': '/docs/images/$1',
+        '/ru/images/(.*)': '/docs/images/$1',
+        '/en/images/(.*)': '/docs/images/$1'
       }
     };
     
-    // 更安全的初始化代码
+    // Safer initialization code
     window.addEventListener('DOMContentLoaded', function() {
-      // 仅当URL中含有语言代码且哈希为空时设置默认哈希
+      // Only set default hash when URL contains language code and hash is empty
       try {
         if (lang && !window.location.hash) {
           setTimeout(function() {

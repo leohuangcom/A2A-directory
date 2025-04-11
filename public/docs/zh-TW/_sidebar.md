@@ -1,0 +1,20 @@
+<!-- docs/_sidebar.md -->
+
+* [首頁](/)
+* [部落格文章](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
+* [技術文檔](/documentation.md)
+* 核心主題
+  * [A2A和MCP](/topics/a2a_and_mcp.md)
+  * [智能體發現](/topics/agent_discovery.md)
+  * [企業級準備](/topics/enterprise_ready.md)
+  * [推送通知](/topics/push_notifications.md)
+* [Json規範](https://github.com/google/A2A/tree/main/specification/json)
+* [A2A實戰示例](https://github.com/google/A2A/tree/main/samples)
+  * [A2A客戶端/服務器示例](https://github.com/google/A2A/tree/main/samples/python/common)
+  * [多智能體Web應用](https://github.com/google/A2A/tree/main/demo/README.md)
+  * [命令行工具](https://github.com/google/A2A/blob/main/samples/python/hosts/cli/README.md)
+* [示例智能體](https://github.com/google/A2A/tree/main/samples)
+  * [Google智能體開發工具包(ADK)](https://github.com/google/A2A/tree/main/samples/python/agents/google_adk/README.md)
+  * [CrewAI](https://github.com/google/A2A/tree/main/samples/python/agents/crewai/README.md)
+  * [LangGraph](https://github.com/google/A2A/tree/main/samples/python/agents/langgraph/README.md)
+  * [Genkit](https://github.com/google/A2A/tree/main/samples/js/src/agents/README.md) 

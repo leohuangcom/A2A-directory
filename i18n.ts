@@ -8,8 +8,18 @@ export const languages = [
     label: 'English',
   },
   {
+    code: 'zh-CN',
+    lang: 'zh-CN',
+    label: '简体中文',
+  },
+  {
+    code: 'zh-TW',
+    lang: 'zh-TW',
+    label: '繁體中文',
+  },
+  {
     code: 'ja-JP',
-    lang: 'jp',
+    lang: 'ja',
     label: '日本語',
   },
   {
@@ -36,16 +46,6 @@ export const languages = [
     code: 'ru-RU',
     lang: 'ru',
     label: 'Русский',
-  },
-  {
-    code: 'zh-CN',
-    lang: 'zh-CN',
-    label: '简体中文',
-  },
-  {
-    code: 'zh-TW',
-    lang: 'zh-TW',
-    label: '繁體中文',
   },
 ];
 
