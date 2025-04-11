@@ -66,7 +66,17 @@
         '/pt/': '/pt/README.md',
         '/ru/': '/ru/README.md',
         '/en/': '/en/README.md',
-        '/': '/en/README.md'
+        '/': '/en/README.md',
+        
+        // Topic document language mappings
+        '/zh-CN/topics/(.*)': '/zh-CN/topics/$1',
+        '/zh-TW/topics/(.*)': '/zh-TW/topics/$1',
+        '/ja/topics/(.*)': '/ja/topics/$1',
+        '/de/topics/(.*)': '/de/topics/$1',
+        '/es/topics/(.*)': '/es/topics/$1',
+        '/fr/topics/(.*)': '/fr/topics/$1',
+        '/pt/topics/(.*)': '/pt/topics/$1',
+        '/ru/topics/(.*)': '/ru/topics/$1'
       },
       
       // Configure image paths for all languages
@@ -87,8 +97,8 @@
       fallbackLanguages: ['en']
     };
     
-    // Initialize correct language path
-    document.addEventListener('DOMContentLoaded', function() {
+    // Override link behavior to maintain language context
+    window.addEventListener('DOMContentLoaded', function() {
       try {
         // Get current hash path
         var currentHash = window.location.hash || '';
@@ -105,6 +115,19 @@
             window.location.hash = '/' + lang + '/';
           }, 100);
         }
+        
+        // Monkey patch the link click handler to maintain language context
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          // Check if the clicked element is a link inside the sidebar
+          if (target.tagName === 'A' && target.getAttribute('href') && 
+              target.getAttribute('href').startsWith('/topics/')) {
+            e.preventDefault();
+            // Redirect to the correct language path for the topic
+            var href = target.getAttribute('href');
+            window.location.hash = '#/' + lang + href;
+          }
+        }, true);
       } catch (e) {
         console.error('Error handling language path:', e);
       }

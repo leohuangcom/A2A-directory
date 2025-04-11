@@ -4,8 +4,8 @@
 * [博客文章](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)
 * [技术文档](/documentation.md)
 * 核心主题
-  * [A2A和MCP](/topics/a2a_and_mcp.md)
-  * [智能体发现](/topics/agent_discovery.md)
+  * [A2A和MCP](/zh-CN/topics/a2a_and_mcp.md)
+  * [智能体发现](/zh-CN/topics/agent_discovery.md)
   * [企业级准备](/topics/enterprise_ready.md)
   * [推送通知](/topics/push_notifications.md)
 * [Json规范](https://github.com/google/A2A/tree/main/specification/json)
