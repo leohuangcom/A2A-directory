@@ -81,20 +81,32 @@
         '/pt/images/(.*)': '/docs/images/$1',
         '/ru/images/(.*)': '/docs/images/$1',
         '/en/images/(.*)': '/docs/images/$1'
-      }
+      },
+
+      // Force the correct language path 
+      fallbackLanguages: ['en']
     };
     
-    // Safer initialization code
-    window.addEventListener('DOMContentLoaded', function() {
-      // Only set default hash when URL contains language code and hash is empty
+    // Initialize correct language path
+    document.addEventListener('DOMContentLoaded', function() {
       try {
-        if (lang && !window.location.hash) {
+        // Get current hash path
+        var currentHash = window.location.hash || '';
+        
+        // Check if hash already contains language code
+        var hashLangMatch = currentHash.match(/#\/([^\/]+)\//);
+        var hashLang = hashLangMatch ? hashLangMatch[1] : null;
+        
+        // Only set hash if it's empty or if the hash lang doesn't match URL lang
+        if (!currentHash || currentHash === '#/' || hashLang !== lang) {
+          console.log('Setting language path to: ' + lang);
+          // Use timeout to ensure this runs after Docsify initialization
           setTimeout(function() {
             window.location.hash = '/' + lang + '/';
-          }, 200);
+          }, 100);
         }
       } catch (e) {
-        console.error('Error setting hash path:', e);
+        console.error('Error handling language path:', e);
       }
     });
   </script>
