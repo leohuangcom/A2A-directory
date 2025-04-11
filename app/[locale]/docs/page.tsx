@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function DocsPage() {
+  const router = useRouter();
+
   useEffect(() => {
-    // 重定向到docsify文档
-    window.location.href = '/docs/index.html';
-  }, []);
+    // 使用相对路径重定向到 docsify 文档
+    router.push('/docs/index.html');
+  }, [router]);
 
   return (
     <div className='flex min-h-screen items-center justify-center'>

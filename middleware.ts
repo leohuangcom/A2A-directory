@@ -1,11 +1,16 @@
-import { type NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { locales } from './i18n';
 
-import intlMiddleware from './middlewares/intlMiddleware';
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: locales,
+  // Used when no locale matches
+  defaultLocale: 'en-US',
+  localePrefix: 'always',
+});
 
-export default function middleware(request: NextRequest) {
-  return intlMiddleware(request);
-}
-
+// 配置需要国际化的路由
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  // 跳过 /docs 路径的国际化处理
+  matcher: ['/((?!docs|api|_next|_vercel|.*\\..*).*)']
 };
