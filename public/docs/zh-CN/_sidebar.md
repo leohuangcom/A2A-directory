@@ -6,8 +6,8 @@
 * 核心主题
   * [A2A和MCP](/zh-CN/topics/a2a_and_mcp.md)
   * [智能体发现](/zh-CN/topics/agent_discovery.md)
-  * [企业级准备](/topics/enterprise_ready.md)
-  * [推送通知](/topics/push_notifications.md)
+  * [企业级准备](/zh-CN/topics/enterprise_ready.md)
+  * [推送通知](/zh-CN/topics/push_notifications.md)
 * [Json规范](https://github.com/google/A2A/tree/main/specification/json)
 * [A2A实战示例](https://github.com/google/A2A/tree/main/samples)
   * [A2A客户端/服务器示例](https://github.com/google/A2A/tree/main/samples/python/common)
